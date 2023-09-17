@@ -1,0 +1,134 @@
+
+.container{
+	width: 1280px;
+	margin: auto;
+}
+.header_block_nav{
+	display: flex;
+	justify-content: space-between;
+	padding: 12px 0;
+	align-items: center;
+}
+.header_nav_block{
+	display: flex;
+	align-items: center;
+}
+.header{
+	background: #232536;
+}
+.header_nav_block_item_link{
+	font-family: Inter;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 28px;
+	color:#FFF;
+	transition: 0.4s;
+}
+.scalehover{
+	transition: 0.4s;	
+}
+.scalehover:hover{
+	scale: 1.2;
+}
+.header_nav_block_button{
+	padding: 16px 48px;
+	background: #FFF;
+	margin-left: 32px;
+	font-family: Inter;
+}
+.mrg_l{
+	margin-left: 24px;
+}
+.header_nav_block_item_button{
+	font-family: Sen;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 24px;
+	letter-spacing: 0px;
+	text-align: left;
+	color: #232536;
+}	
+
+.hover_menu,.header_nav_menu{
+	display: none;
+}
+.hover_menu_pmg{
+	width: 30px;
+}
+.header_nav_menu_block {
+	position: fixed;
+	top: 0;
+	right: -220px;
+	padding: 20px ;
+	background: red;
+	transition: 0.4s;
+  }
+  .hover_menu:hover  .header_nav_menu_block {
+	display: block;
+	right: 0;
+  }
+  @media (max-width: 1280px) {
+    .container{
+		max-width: 1040px;
+	}
+	.header_block_nav{
+		padding: 12px 20px;
+	}
+  }
+@media (max-width: 1040px) {
+    .container{
+		max-width: 940px;
+	}
+}
+@media (max-width: 940px) {
+    .container{
+		max-width: 700px;
+	}
+}
+@media (max-width: 720px) {
+    .container{
+		width: 100%;
+	}
+	.header_block_nav {
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	
+	.header_nav_block {
+	  margin-top: 12px;
+	}
+	
+	.header_nav_block_button {
+	  margin: 16px 0; 
+	}
+	
+	.header_nav_menu,.hover_menu{
+		display: block;
+	}
+	.header_nav{
+		display: none;
+	}
+	.mrg_l{
+		margin-left: 0;
+		margin-top: 20px;
+		text-align: center;
+	}
+	.header_nav_block_button {
+		margin: 6px 0;
+	}
+	.header_nav_block_item_button {
+		font-family: Sen;
+		font-size: 14px;
+		line-height: 14px;
+	}
+	.header_nav_block_button {
+		padding: 10px 28px;
+		margin-left: 0;
+	}
+  }
+  
+
+  .active{
+	color: blue;
+}
