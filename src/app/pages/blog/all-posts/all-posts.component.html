@@ -1,0 +1,16 @@
+    <div class="blog-section__1_box-elm-2-card">
+        <div class="blog-section__1_box-elm-2-card-img">
+            <img [ngClass]="{ 'cotugory_section-width': isCotugory, 'blog-section__1_box-elm-2-card-img-item': isBlog }" src={{allPosts.image}} alt="blog_section_1_img_1" class="blog-section__1_box-elm-2-card-img-item">
+        </div>
+        <div class="blog-section__1_box-elm-2-card-text">
+            <p class="blog-section__1_box-elm-2-card-text-elm-1">
+                {{allPosts.category}}
+            </p>
+            <h2 class="blog-section__1_box-elm-2-card-text-title">
+                {{allPosts.title}}
+            </h2>
+            <p class="blog-section__1_box-elm-2-card-text-elm-2">
+                {{allPosts.short_description}}
+            </p>
+        </div>
+    </div>

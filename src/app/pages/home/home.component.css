@@ -570,7 +570,12 @@
 	background: #FFD050;
 	width: 174px;
 }
-
+.users_flex,
+.categoties_flex{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
 
 
 
@@ -650,7 +655,11 @@
 	}
 	.margin_left_73,.margin_left_75,.margin_left_86 {
 		margin-left: 70px;
-	}	
+	}
+	.users_flex,
+	.categoties_flex {
+		justify-content: space-around;
+	}
 }
 
   

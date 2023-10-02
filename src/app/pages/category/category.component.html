@@ -16,79 +16,8 @@
 <div class="category__section_2">
     <div class="container">
         <div class="category__section_2-box">
-            <div class="category__section_2-box-elm-1-block">
-                <div class="category__section_2-box-elm-1">
-                    <div class="category__section_2-box-elm-1-img">
-                        <img src="assets/img/category/category__section_2_img_1.png" alt="category__section_2_img_1" class="category__section_2-box-elm-1-img-item">
-                    </div>
-                    <div class="category__section_2-box-elm-1-text">
-                        <p class="category__section_2-box-elm-1-text-subtitle">
-                            BUSSINES
-                        </p>
-                        <h2 class="category__section_2-box-elm-1-text-title">
-                            Top 6 free website mockup tools 2022
-                        </h2>
-                        <p class="category__section_2-box-elm-1-text-elm-1">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Non blandit massa enim nec.
-                        </p>
-                    </div>
-                </div>
-                <div class="category__section_2-box-elm-1 category__section_2-box-elm-1-margin-top">
-                    <div class="category__section_2-box-elm-1-img">
-                        <img src="assets/img/category/category__section_2_img_1.png" alt="category__section_2_img_1" class="category__section_2-box-elm-1-img-item">
-                    </div>
-                    <div class="category__section_2-box-elm-1-text">
-                        <p class="category__section_2-box-elm-1-text-subtitle">
-                            BUSSINES
-                        </p>
-                        <h2 class="category__section_2-box-elm-1-text-title">
-                            Step-by-step guide to choosing great font pairs
-                        </h2>
-                        <p class="category__section_2-box-elm-1-text-elm-1">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Non blandit massa enim nec.
-                        </p>
-                    </div>
-                </div>
-                <div class="category__section_2-box-elm-1 category__section_2-box-elm-1-margin-top">
-                    <div class="category__section_2-box-elm-1-img">
-                        <img src="assets/img/category/category__section_2_img_1.png" alt="category__section_2_img_1" class="category__section_2-box-elm-1-img-item">
-                    </div>
-                    <div class="category__section_2-box-elm-1-text">
-                        <p class="category__section_2-box-elm-1-text-subtitle">
-                            BUSSINES
-                        </p>
-                        <h2 class="category__section_2-box-elm-1-text-title">
-                            Ten free foogle fonts that you should use
-                        </h2>
-                        <p class="category__section_2-box-elm-1-text-elm-1">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Non blandit massa enim nec.
-                        </p>
-                    </div>
-                </div>
-                <div class="category__section_2-box-elm-1 category__section_2-box-elm-1-margin-top">
-                    <div class="category__section_2-box-elm-1-img">
-                        <img src="assets/img/category/category__section_2_img_1.png" alt="category__section_2_img_1" class="category__section_2-box-elm-1-img-item">
-                    </div>
-                    <div class="category__section_2-box-elm-1-text">
-                        <p class="category__section_2-box-elm-1-text-subtitle">
-                            BUSSINES
-                        </p>
-                        <h2 class="category__section_2-box-elm-1-text-title">
-                            What did I learn from doing 50+ design sprints?
-                        </h2>
-                        <p class="category__section_2-box-elm-1-text-elm-1">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Non blandit massa enim nec.
-                        </p>
-                    </div>
-                </div>
+            <div class="category__section_2-box-elm-1-flex">
+              <app-all-posts [isCotugory]="true" *ngFor="let value of posts" [allpost]="value"></app-all-posts>
             </div>
             <div class="category__section_2-box-elm-2">
                 <div class="category__section_2-box-elm-2-categories">
@@ -167,7 +96,7 @@
                                 Life
                             </p>
                         </div>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </div>

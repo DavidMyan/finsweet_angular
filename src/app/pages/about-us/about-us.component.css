@@ -110,6 +110,12 @@
     width: 550px;
     min-height: 23px;
 }
+.users_flex{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
 @media (max-width: 1280px) {
     .container{
 		width: 1040px;
@@ -131,7 +137,9 @@
     .about_us_section__1-box-elm-1 {
         padding: 0 0 0 101px;
     }
-  
+    .users_flex {
+		justify-content: space-around;
+	}
 }
 @media (max-width: 1040px) {
     .container{

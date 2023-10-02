@@ -1,12 +1,8 @@
 .section_3_box_1_elm_1_box_elm_1{
-	padding: 32px;
+	padding: 31px;
 	width: 296px;
 	margin-top: 48px;
 	transition: 0.4s;
-}
-.section_3_box_1_elm_1_box_elm_1_icon_img{
-	width: 30px;
-	height: 30px;
 }
 .section_3_box_1_elm_1_box_elm_1_icon{
 	width: 48px;
@@ -22,13 +18,15 @@
 	transition: 0.40s;
 }
 .section_3_box_1_elm_1_box_elm_1_title{
+	margin: 4px 0 16px;
+}
+.section_3_box_1_elm_1_box_elm_1_title > a{
 	font-family: Sen;
 	font-size: 28px;
 	font-weight: 700;
 	line-height: 40px;
 	letter-spacing: -1px;
 	color: #6D6E76;
-	margin: 4px 0 16px;
 }
 .section_3_box_1_elm_1_box_elm_1_text{
 	font-family: Inter;

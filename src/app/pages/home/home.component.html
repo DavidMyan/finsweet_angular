@@ -16,7 +16,7 @@
                 cupidatat non proident.
             </p>
             <div class="header_overlay_box_text_elm_btn">
-                <a href="#" class="header_overlay_box_text_elm_btn_link">Read More></a>
+                <a routerLink="blog-post" class="header_overlay_box_text_elm_btn_link">Read More></a>
             </div>
         </div>
     </div>
@@ -30,7 +30,7 @@
                 <div class="section_1_box_1_elm_1_img_box">
                     <div class="section_1_box_1_elm_1_img_box_img">
                         <img class="section_1_box_1_elm_1_img_box_img_item"
-                         src="../../../assets/img/home_main/section_1_img.png" alt="section_1img">
+                         src="assets/img/home_main/section_1_img.png" alt="section_1img">
                     </div>
                     <p class="section_1_box_1_elm_1_img_box_text_elm_1">
                         By <span>John Doe</span>   l   May 23, 2022
@@ -44,7 +44,7 @@
                         dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
                     </p>
                     <div class="section_1_box_1_elm_1_img_box_button">
-                        <a href="#" class="section_1_box_1_elm_1_img_box_button_link">
+                        <a routerLink="blog-post" class="section_1_box_1_elm_1_img_box_button_link">
                             Read Mare>
                         </a>
                     </div>
@@ -57,7 +57,7 @@
                             All Posts
                         </h2>
                         <p class="section_1_box_2_elm_1_text_title_par">
-                            <a href="#">Vinew All</a>
+                            <a routerLink="blog-post">Vinew All</a>
                         </p>
                     </div>
                     <div class="section_1_box_2_elm_2_shape_box">
@@ -140,7 +140,9 @@
             <h2 class="section_3_box_1_elm_1_title">
                 Choose A Catagory
             </h2>
-            <app-categories-card></app-categories-card>
+            <div class="categoties_flex">
+                <app-categories-card *ngFor="let value of category" [item]="value"></app-categories-card>
+            </div>
         </div>
         <div class="section_4_box_1">
             <div class="section_4_box_1_elm_1">
@@ -160,7 +162,7 @@
                     exercitation ullamco laboris nisi ut aliquip.
                 </p>
                 <div class="section_4_box_1_elm_2_button">
-                    <a href="#" class="section_4_box_1_elm_2_button_link">
+                    <a routerLink="blog" class="section_4_box_1_elm_2_button_link">
                         Discover our story >
                     </a>
                 </div>
@@ -170,8 +172,10 @@
             <h2 class="section_5_box_1_elm_1_text_title">
                 List of Authors
             </h2>
+            <div class="users_flex">
+                <app-users-card *ngFor="let value of usersInfo" [item]="value"></app-users-card>
+            </div>
         </div>
-        <app-users-card></app-users-card>
         <div class="section_6_box_1">
             <div class="section_6_box_1_elm_1">
                 <div class="section_6_box_1_elm_1_text">

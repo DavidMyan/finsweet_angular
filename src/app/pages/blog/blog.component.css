@@ -79,6 +79,12 @@
 	letter-spacing: 0px;
 	color: #232536;
 }
+.categoties_flex{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
 @media (max-width: 1280px) {
     .container{
 		width: 1040px;
@@ -89,6 +95,9 @@
     .header__blog-box-elm-1-text-title {
         width: 424px;
     }
+    .categoties_flex {
+		justify-content: space-around;
+	}
 }
 @media (max-width: 1040px) {
     .container{
@@ -159,50 +168,11 @@
     font-weight: 700;
     line-height: 64px;
     letter-spacing: -2px;
-     color: #232536;   
+     color: #232536;
      padding-bottom: 32px;
      border-bottom: 1px solid #6d6e764c;
 }
-.blog-section__1_box-elm-2{
-    margin-top: 64px;
-}
-.blog-section__1_box-elm-2-card{
-    display: flex;
-    align-items: center;
-}
-.blog-section__1_box-elm-2-card-text{
-    margin-left: 32px;
-}
-.blog-section__1_box-elm-2-card-text-elm-1{
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 20px;
-    letter-spacing: 3px;
-    color: #592EA9;
-}
-.blog-section__1_box-elm-2-card-text-title{
-    font-family: Sen;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 48px;
-    letter-spacing: -2px;
-    color: #232536;
-    margin: 16px 0 20px;
-    width: 602.89px;
-}
-.blog-section__1_box-elm-2-card-text-elm-2{
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0px;
-    color: #6D6E76;
-    width: 624px;
-}
-.blog-section__1_box-elm-2-card-margin-top{
-    margin-top: 64px;
-}
+
 .blog-section__1_box-elm-2-action-btn-prev-link,
 .blog-section__1_box-elm-2-action-btn-next-link{
     font-family: Sen;
@@ -230,6 +200,7 @@
     display: inline-block;
     transition: 0.4s;
 }
+
 @media (max-width: 1280px) {
     .blog-section__1_box-elm-2-card-text-title,.blog-section__1_box-elm-2-card-text-elm-2 {
         width: 500px;
@@ -275,7 +246,7 @@
     .blog-section__1_box-elm-2-card-img {
         display: flex;
         justify-content: center;
-    }   
+    }
     .blog-section__1_box-elm-2-action-btn-prev-link,
     .blog-section__1_box-elm-2-action-btn-next-link {
         font-family: Sen;
@@ -400,4 +371,10 @@
     .blog-section__2-box-1 {
         margin: 58px 0 0;
     }
+}
+.posts_flex{
+    display: flex;
+    flex-direction: column;
+    gap: 64px 0;
+    margin: 64px 0 ;
 }

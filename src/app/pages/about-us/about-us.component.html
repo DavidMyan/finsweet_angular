@@ -160,8 +160,11 @@
         <h2 class="about_us_section__5-box-1-elm-1-text-title">
             List of Authors
         </h2>
-        <app-users-card></app-users-card>
-        <app-users-card></app-users-card>
+        <div class="users_flex">
+            <app-users-card *ngFor="let value of usersInfo" [item]="value"></app-users-card>
+        </div>
+
+        
         <app-join></app-join>
     </div>
 </div>
