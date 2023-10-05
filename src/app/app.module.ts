@@ -40,7 +40,7 @@ const routes:Route[] = [
           title:'About-Us'
         },
         {
-          path:' contact-us',
+          path:'contact-us',
           component:ContactComponent,
           title: 'Contact-Us'
         },
