@@ -1,0 +1,174 @@
+{
+  "category": [
+    {
+      "id": 1,
+      "image": "assets/img/home_main/icon_1.png",
+      "title": "Business",
+      "short_description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+    },
+    {
+      "id": 2,
+      "image": "assets/img/home_main/icon_2.png",
+      "title": "Startup",
+      "short_description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+    },
+    {
+      "id": 3,
+      "image": "assets/img/home_main/icon_3.png",
+      "title": "Economy",
+      "short_description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+    },
+    {
+      "id": 4,
+      "image": "assets/img/home_main/icon_4.png",
+      "title": "Technology",
+      "short_description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "image": "assets/img/blog_main/blog_section_1_img_2.png",
+      "category": "Startup",
+      "title": "Design tips for designers that cover everything you need",
+      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    },
+    {
+      "id": 2,
+      "image": "assets/img/blog_main/blog_section_1_img_1.png",
+      "category": "BUSINESS",
+      "title": "How to build rapport with your web design clients",
+      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    },
+    {
+      "id": 3,
+      "image": "assets/img/blog_main/blog_section_1_img_1.png",
+      "category": "Startup",
+      "title": "Design tips for designers that cover everything you need",
+      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    },
+    {
+      "id": 4,
+      "image": "assets/img/blog_main/blog_section_1_img_2.png",
+      "category": "BUSINESS",
+      "title": "How to build rapport with your web design clients",
+      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    },
+    {
+      "id": 5,
+      "image": "assets/img/blog_main/blog_section_1_img_3.png",
+      "category": "Startup",
+      "title": "Logo design trends to avoid in 2022",
+      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    },
+    {
+      "id": 6,
+      "image": "assets/img/blog_main/blog_section_1_img_4.png",
+      "category": "TECHNOLOGY",
+      "title": "8 Figma design systems you can download for free today",
+      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    },
+    {
+      "id": 7,
+      "image": "assets/img/blog_main/blog_section_1_img_1.png",
+      "category": "Startup",
+      "title": "Font sizes in UI design: The complete guide to follow",
+      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    }
+  
+    
+  ],
+  "singleAuthor": [
+    {
+      "id": 1,
+      "image": "assets/img/home_main/section_user_3.png",
+      "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
+      "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus."
+    }
+  ],
+    "usersInfo": [
+      {
+        "id": 1,
+        "image": "assets/img/home_main/section_user_1.png",
+        "name": "Floyd Miles",
+        "short_description": "Content Writer @Company",
+        "facebook": "assets/img/footer/facebook.png",
+        "twiter": "assets/img/footer/twiter.png",
+        "instagram": "assets/img/footer/instagram.png",
+        "in": "assets/img/footer/in.png"
+      },
+      {
+        "id": 2,
+        "image": "assets/img/home_main/section_user_2.png",
+        "name": "Dianne Russell",
+        "short_description": "Content Writer @Company",
+        "facebook": "assets/img/footer/facebook.png",
+        "twiter": "assets/img/footer/twiter.png",
+        "instagram": "assets/img/footer/instagram.png",
+        "in": "assets/img/footer/in.png"
+      },
+      {
+        "id": 3,
+        "image": "assets/img/home_main/section_user_3.png",
+        "name": "Jenny Wilson",
+        "short_description": "Content Writer @Company",
+        "facebook": "assets/img/footer/facebook.png",
+        "twiter": "assets/img/footer/twiter.png",
+        "instagram": "assets/img/footer/instagram.png",
+        "in": "assets/img/footer/in.png"
+      },
+      {
+        "id": 4,
+        "image": "assets/img/home_main/section_user_4.png",
+        "name": "Leslie Alexander",
+        "short_description": "Content Writer @Company",
+        "facebook": "assets/img/footer/facebook.png",
+        "twiter": "assets/img/footer/twiter.png",
+        "instagram": "assets/img/footer/instagram.png",
+        "in": "assets/img/footer/in.png"
+      },
+      {
+        "id": 5,
+        "image": "assets/img/about_us/section_5_img_user_1.png",
+        "name": "Leslie Alexander",
+        "short_description": "Content Writer @Company",
+        "facebook": "assets/img/footer/facebook.png",
+        "twiter": "assets/img/footer/twiter.png",
+        "instagram": "assets/img/footer/instagram.png",
+        "in": "assets/img/footer/in.png"
+      },
+      {
+        "id": 6,
+        "image": "assets/img/about_us/section_5_img_user_2.png",
+        "name": "Leslie Alexander",
+        "short_description": "Content Writer @Company",
+        "facebook": "assets/img/footer/facebook.png",
+        "twiter": "assets/img/footer/twiter.png",
+        "instagram": "assets/img/footer/instagram.png",
+        "in": "assets/img/footer/in.png"
+      },
+      {
+        "id": 7,
+        "image": "assets/img/about_us/section_5_img_user_3.png",
+        "name": "Leslie Alexander",
+        "short_description": "Content Writer @Company",
+        "facebook": "assets/img/footer/facebook.png",
+        "twiter": "assets/img/footer/twiter.png",
+        "instagram": "assets/img/footer/instagram.png",
+        "in": "assets/img/footer/in.png"
+      },
+      {
+        "id": 8,
+        "image": "assets/img/about_us/section_5_img_user_4.png",
+        "name": "Leslie Alexander",
+        "short_description": "Content Writer @Company",
+        "facebook": "assets/img/footer/facebook.png",
+        "twiter": "assets/img/footer/twiter.png",
+        "instagram": "assets/img/footer/instagram.png",
+        "in": "assets/img/footer/in.png"
+      }
+    ]
+      
+
+  
+}

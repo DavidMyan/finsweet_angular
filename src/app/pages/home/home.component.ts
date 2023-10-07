@@ -5,7 +5,8 @@ import { UsersCardComponent } from "./users-card/users-card.component";
 import { JoinComponent } from "./join/join.component";
 import { NgForOf } from '@angular/common';
 import { CategoryCard, UsersCard } from 'src/app/modues/glob_muduls';
-
+import { DataService } from 'src/app/http.service';
+import { OnInit } from '@angular/core';
 @Component({
     standalone: true,
     imports: [
@@ -20,73 +21,22 @@ import { CategoryCard, UsersCard } from 'src/app/modues/glob_muduls';
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
-  category:CategoryCard[] = [
-    {
-      id:1,
-      image:'assets/img/home_main/icon_1.png',
-      title:'Business',
-      short_description:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-    },
-    {
-      id:2,
-      image:'assets/img/home_main/icon_2.png',
-      title:'Startup',
-      short_description:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-    },
-    {
-      id:3,
-      image:'assets/img/home_main/icon_3.png',
-      title:'Economy',
-      short_description:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-    },
-    {
-      id:4,
-      image:'assets/img/home_main/icon_4.png',
-      title:'Technology',
-      short_description:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-    }
-  ]
-  usersInfo: UsersCard[] = [
-    {
-      id: 1,
-      image: 'assets/img/home_main/section_user_1.png',
-      name: 'Floyd Miles',
-      short_description: 'Content Writer @Company',
-      facebook: "assets/img/footer/facebook.png",
-      twiter: "assets/img/footer/twiter.png",
-      instagram: "assets/img/footer/instagram.png",
-      in: "assets/img/footer/in.png",
-    },
-    {
-      id: 2,
-      image: 'assets/img/home_main/section_user_2.png',
-      name: 'Dianne Russell',
-      short_description: 'Content Writer @Company',
-      facebook: "assets/img/footer/facebook.png",
-      twiter: "assets/img/footer/twiter.png",
-      instagram: "assets/img/footer/instagram.png",
-      in: "assets/img/footer/in.png",
-    },
-    {
-      id: 3,
-      image: 'assets/img/home_main/section_user_3.png',
-      name: 'Jenny Wilson',
-      short_description: 'Content Writer @Company',
-      facebook: "assets/img/footer/facebook.png",
-      twiter: "assets/img/footer/twiter.png",
-      instagram: "assets/img/footer/instagram.png",
-      in: "assets/img/footer/in.png",
-    },
-    {
-      id: 4,
-      image: 'assets/img/home_main/section_user_4.png',
-      name: 'Leslie Alexander',
-      short_description: 'Content Writer @Company',
-      facebook: "assets/img/footer/facebook.png",
-      twiter: "assets/img/footer/twiter.png",
-      instagram: "assets/img/footer/instagram.png",
-      in: "assets/img/footer/in.png",
-    }
-  ]
+
+export class HomeComponent implements OnInit {
+  category: CategoryCard[] = [];
+  usersInfo: UsersCard[] = [];
+  limitCategory = 4;
+  limitUsers = 4;
+
+  constructor(private dataService: DataService) {}
+
+  ngOnInit(): void {
+    this.dataService.getCategory(this.limitCategory).subscribe(data => {
+      this.category = data;
+    });
+
+    this.dataService.getUsersInfo(this.limitUsers).subscribe(data => {
+      this.usersInfo = data;
+    });
+  }
 }

@@ -1,4 +1,5 @@
 export interface CategoryCard{
+    category: any;
     id:number;
     image:string;
     title:string;
