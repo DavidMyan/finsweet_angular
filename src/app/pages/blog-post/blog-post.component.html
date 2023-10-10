@@ -141,66 +141,24 @@
                     </div>
                 </div>
                 <div class="blog_post-section__4-box-elm-2">
-                    <div class="blog_post-section__4-box-elm-2-post-box">
+                    <div class="blog_post-section__4-box-elm-2-post-box" *ngFor="let value of post">
                        <div class="blog_post-section__4-box-elm-2-post-box-elm-1-img">
-                          <img src="assets/img/blog_post_main/section_4_img_1.jpg" alt="" class="blog_post-section__4-box-elm-2-posts-box-elm-1-img-item">
+                          <img src={{value.image}} alt="" class="blog_post-section__4-box-elm-2-posts-box-elm-1-img-item">
                        </div>
                        <div class="blog_post-section__4-box-elm-2-posts-box-elm-2">
                             <div class="blog_post-section__4-box-elm-2-posts-box-elm-2-text">
                                 <p class="blog_post-section__4-box-elm-2-posts-box-elm-2-text-date">
-                                    By <span>John Doe</span> l   Aug 23, 2021 
+                                    By <span>{{value.postUser}}</span> l   {{value.postData}}
                                 </p>
                                 <h3 class="blog_post-section__4-box-elm-2-posts-box-elm-2-text-title">
-                                    A UX Case Study Creating a Studious Environment for Students: 
+                                    {{value.title}}
                              </h3>
                                 <p class="blog_post-section__4-box-elm-2-posts-box-elm-2-text-coment">
-                                    Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                    cupidatat non proident.
+                                    {{value.short_description}}
                                 </p>
                             </div>
                        </div>
                     </div>
-                    <div class="blog_post-section__4-box-elm-2-post-box">
-                        <div class="blog_post-section__4-box-elm-2-post-box-elm-1-img">
-                           <img src="assets/img/blog_post_main/section_4_img_2.jpg" alt="" class="blog_post-section__4-box-elm-2-posts-box-elm-1-img-item">
-                        </div>
-                        <div class="blog_post-section__4-box-elm-2-posts-box-elm-2">
-                             <div class="blog_post-section__4-box-elm-2-posts-box-elm-2-text">
-                                 <p class="blog_post-section__4-box-elm-2-posts-box-elm-2-text-date">
-                                     By <span>John Doe</span> l   Aug 23, 2021 
-                                 </p>
-                                 <h3 class="blog_post-section__4-box-elm-2-posts-box-elm-2-text-title">
-                                     A UX Case Study Creating a Studious Environment for Students: 
-                                 </h3>
-                                 <p class="blog_post-section__4-box-elm-2-posts-box-elm-2-text-coment">
-                                     Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                     cupidatat non proident.
-                                 </p>
-                             </div>
-                        </div>
-                     </div>
-                     <div class="blog_post-section__4-box-elm-2-post-box">
-                        <div class="blog_post-section__4-box-elm-2-post-box-elm-1-img">
-                           <img src="assets/img/blog_post_main/section_4_img_3.jpg" alt="" class="blog_post-section__4-box-elm-2-posts-box-elm-1-img-item">
-                        </div>
-                        <div class="blog_post-section__4-box-elm-2-posts-box-elm-2">
-                             <div class="blog_post-section__4-box-elm-2-posts-box-elm-2-text">
-                                 <p class="blog_post-section__4-box-elm-2-posts-box-elm-2-text-date">
-                                     By <span>John Doe</span> l   Aug 23, 2021 
-                                 </p>
-                                 <h3 class="blog_post-section__4-box-elm-2-posts-box-elm-2-text-title">
-                                     A UX Case Study Creating a Studious Environment for Students: 
-                                 </h3>
-                                 <p class="blog_post-section__4-box-elm-2-posts-box-elm-2-text-coment">
-                                     Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                     cupidatat non proident.
-                                 </p>
-                             </div>
-                        </div>
-                     </div>
                 </div>
             </div>
         </div>

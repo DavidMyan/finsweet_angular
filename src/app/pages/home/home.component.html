@@ -27,21 +27,19 @@
                 <h2 class="section_1_box_1_elm_1_title">
                     Featured Post
                 </h2>
-                <div class="section_1_box_1_elm_1_img_box">
+                <div *ngFor="let value of singlPost" class="section_1_box_1_elm_1_img_box" >
                     <div class="section_1_box_1_elm_1_img_box_img">
                         <img class="section_1_box_1_elm_1_img_box_img_item"
-                         src="assets/img/home_main/section_1_img.png" alt="section_1img">
+                         src={{value.image}} alt="section_1img">
                     </div>
                     <p class="section_1_box_1_elm_1_img_box_text_elm_1">
-                        By <span>John Doe</span>   l   May 23, 2022
+                        By <span>{{value.postUser}}</span>   l   {{value.postData}}
                     </p>
                     <h3 class="section_1_box_1_elm_1_img_box_text_elm_2">
-                        Lorem ipsum dolor sit amet, consectetur
-                         adipiscing elit, sed do eiusmod tempor.
+                        {{value.title}}
                     </h3>
                     <p class="section_1_box_1_elm_1_img_box_text_elm_3">
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                        {{value.short_description}}
                     </p>
                     <div class="section_1_box_1_elm_1_img_box_button">
                         <a routerLink="blog-post" class="section_1_box_1_elm_1_img_box_button_link">
@@ -61,43 +59,21 @@
                         </p>
                     </div>
                     <div class="section_1_box_2_elm_2_shape_box">
-                        <div class="section_1_box_2_elm_2_shape_box_elm_1">
-                            <p class="section_1_box_2_elm_2_shape_box_elm_1_text">
-                                By <span>John Deo</span>   l   Aug 23, 2021 
-                            </p>
-                            <div class="section_1_box_2_elm_2_shape_box_elm_1_text_title">
-                                8 Figma design systems that you can download for free today.
-                            </div>
-                        </div>
-                        <div class="section_1_box_2_elm_2_shape_box_elm_1">
-                            <p class="section_1_box_2_elm_2_shape_box_elm_1_text">
-                                By <span>John Deo</span>   l   Aug 23, 2021 
-                            </p>
-                            <div class="section_1_box_2_elm_2_shape_box_elm_1_text_title">
-                                8 Figma design systems that you can download for free today.
-                            </div>
-                        </div>
-                        <div class="section_1_box_2_elm_2_shape_box_elm_1">
-                            <p class="section_1_box_2_elm_2_shape_box_elm_1_text">
-                                By <span>John Deo</span>   l   Aug 23, 2021 
-                            </p>
-                            <div class="section_1_box_2_elm_2_shape_box_elm_1_text_title">
-                                8 Figma design systems that you can download for free today.
-                            </div>
-                        </div>
-                        <div class="section_1_box_2_elm_2_shape_box_elm_1">
-                            <p class="section_1_box_2_elm_2_shape_box_elm_1_text">
-                                By <span>John Deo</span>   l   Aug 23, 2021 
-                            </p>
-                            <div class="section_1_box_2_elm_2_shape_box_elm_1_text_title">
-                                8 Figma design systems that you can download for free today.
+                        <div  *ngFor="let value of posts">
+                            <div class="section_1_box_2_elm_2_shape_box_elm_1">
+                                <p class="section_1_box_2_elm_2_shape_box_elm_1_text">
+                                    By <span>{{value.postUser}}</span>   l   {{value.postData}}
+                                </p>
+                                <div class="section_1_box_2_elm_2_shape_box_elm_1_text_title">
+                                    {{value.title}}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="section_2_box_1">
+      <div class="section_2_box_1">
             <div class="section_2_box_1_line_box">
                 <div class="section_2_box_1_line_box_yellow"></div>
                 <div class="section_2_box_1_line_box_purpule"></div>
@@ -118,7 +94,7 @@
                         <a href="#" class="section_2_box_1_elm_1_text_box_elm_button_link">Read More></a>
                     </div>
                 </div>
-                <div class="section_2_box_2_elm_1_text_box">
+                <div class="section_2_box_2_elm_1_text">
                     <div class="section_2_box_2_elm_1_text_box">
                         <p class="section_2_box_2_elm_1_text_box_elm_1">
                             OUR MISION
@@ -168,12 +144,12 @@
                 </div>
             </div>
         </div>
-        <div class="section_5_box_1">
+       <div class="section_5_box_1">
             <h2 class="section_5_box_1_elm_1_text_title">
                 List of Authors
             </h2>
             <div class="users_flex">
-                <app-users-card *ngFor="let value of usersInfo" [item]="value"></app-users-card>
+                <app-users-card  *ngFor="let value of usersInfo" [item]="value"></app-users-card>
             </div>
         </div>
         <div class="section_6_box_1">
@@ -186,24 +162,24 @@
                         Featured in
                     </h2>
                 </div>
-                <div class="section_6_box_1_elm_1_logo_box margin_left_86">
+                <div class="section_6_box_1_elm_1_logo_box ">
                     <img src="assets/img/home_main/secton_6_logo_1.jpg" alt="setion_6_logo" class="section_6_box_1_elm_1_logo_box">
                 </div>
-                <div class="section_6_box_1_elm_1_logo_box margin_left_75">
+                <div class="section_6_box_1_elm_1_logo_box">
                     <img src="assets/img/home_main/secton_6_logo_2.jpg" alt="setion_6_logo" class="section_6_box_1_elm_1_logo_box">
                 </div>
-                <div class="section_6_box_1_elm_1_logo_box mrg_l margin_left_73">
+                <div class="section_6_box_1_elm_1_logo_box mrg_l ">
                     <img src="assets/img/home_main/secton_6_logo_3.jpg" alt="setion_6_logo" class="section_6_box_1_elm_1_logo_box">
                 </div>
-                <div class="section_6_box_1_elm_1_logo_box margin_left_73">
+                <div class="section_6_box_1_elm_1_logo_box ">
                     <img src="assets/img/home_main/secton_6_logo_4.jpg" alt="setion_6_logo" class="section_6_box_1_elm_1_logo_box">
                 </div>
-                <div class="section_6_box_1_elm_1_logo_box margin_left_74">
+                <div class="section_6_box_1_elm_1_logo_box ">
                     <img src="assets/img/home_main/secton_6_logo_5.jpg" alt="setion_6_logo" class="section_6_box_1_elm_1_logo_box">
                 </div>
             </div>
         </div>
-        <div class="section_7_box_1">
+         <div class="section_7_box_1">
             <div class="section_7_box_1_elm_1">
                 <div class="section_7_box_1_elm_1_text">
                     <p class="section_7_box_1_elm_1_text_elm_1">
@@ -253,4 +229,4 @@
             </div>
         </div>
     </div>
-<app-join></app-join>
+<app-join></app-join> -->

@@ -31,49 +31,63 @@
       "image": "assets/img/blog_main/blog_section_1_img_2.png",
       "category": "Startup",
       "title": "Design tips for designers that cover everything you need",
-      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "postUser": "John Doe",
+      "postData": "May 23, 2022"
     },
     {
       "id": 2,
       "image": "assets/img/blog_main/blog_section_1_img_1.png",
       "category": "BUSINESS",
       "title": "How to build rapport with your web design clients",
-      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "postUser": "John Doe",
+      "postData": "May 23, 2022"
     },
     {
       "id": 3,
       "image": "assets/img/blog_main/blog_section_1_img_1.png",
       "category": "Startup",
       "title": "Design tips for designers that cover everything you need",
-      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "postUser": "John Doe",
+      "postData": "May 23, 2022"
     },
     {
       "id": 4,
       "image": "assets/img/blog_main/blog_section_1_img_2.png",
       "category": "BUSINESS",
       "title": "How to build rapport with your web design clients",
-      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "postUser": "John Doe",
+      "postData": "May 23, 2022"
     },
     {
       "id": 5,
       "image": "assets/img/blog_main/blog_section_1_img_3.png",
       "category": "Startup",
       "title": "Logo design trends to avoid in 2022",
-      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "postUser": "John Doe",
+      "postData": "May 23, 2022"
     },
     {
       "id": 6,
       "image": "assets/img/blog_main/blog_section_1_img_4.png",
       "category": "TECHNOLOGY",
       "title": "8 Figma design systems you can download for free today",
-      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "postUser": "John Doe",
+      "postData": "May 23, 2022"
     },
     {
       "id": 7,
       "image": "assets/img/blog_main/blog_section_1_img_1.png",
       "category": "Startup",
       "title": "Font sizes in UI design: The complete guide to follow",
-      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "postUser": "John Doe",
+      "postData": "May 23, 2022"
     }
   
     
@@ -81,7 +95,7 @@
   "singleAuthor": [
     {
       "id": 1,
-      "image": "assets/img/home_main/section_user_3.png",
+      "image": "assets/img/author/author (2).png",
       "title": "Hey there, I’m Andrew Jonhson and welcome to my Blog",
       "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus."
     }
@@ -168,7 +182,4 @@
         "in": "assets/img/footer/in.png"
       }
     ]
-      
-
-  
 }

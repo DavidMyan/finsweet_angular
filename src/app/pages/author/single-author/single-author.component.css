@@ -26,7 +26,11 @@
 .author__section_1-box-text-social_logo_link-margin{
 	margin-left: 16px;
 }
-
+.author__section_1-box-user-img,
+.author__section_1-box-user{
+	width: 251px;
+	height: 294px;
+}
 
 @media (max-width: 1280px) {
 	.author__section_1-box-text-title {

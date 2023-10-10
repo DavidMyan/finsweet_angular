@@ -4,9 +4,11 @@ import { CategoriesCardComponent } from "./categories-card/categories-card.compo
 import { UsersCardComponent } from "./users-card/users-card.component";
 import { JoinComponent } from "./join/join.component";
 import { NgForOf } from '@angular/common';
-import { CategoryCard, UsersCard } from 'src/app/modues/glob_muduls';
-import { DataService } from 'src/app/http.service';
+import { AllPosts, CategoryCard, UsersCard } from 'src/app/modues/glob_muduls';
 import { OnInit } from '@angular/core';
+import { AllPostsComponent } from '../blog/all-posts/all-posts.component';
+import { HttpService } from 'src/app/service/http.service';
+import { environment } from 'src/environment/environment';
 @Component({
     standalone: true,
     imports: [
@@ -14,7 +16,8 @@ import { OnInit } from '@angular/core';
       CategoriesCardComponent,
       UsersCardComponent,
       JoinComponent,
-      NgForOf
+      NgForOf,
+      AllPostsComponent
     ],
 
     selector: 'app-home',
@@ -25,18 +28,23 @@ import { OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   category: CategoryCard[] = [];
   usersInfo: UsersCard[] = [];
-  limitCategory = 4;
-  limitUsers = 4;
+  posts: AllPosts[] = [];
+  singlPost: AllPosts[] = [];
 
-  constructor(private dataService: DataService) {}
+  constructor(private http: HttpService) {}
 
   ngOnInit(): void {
-    this.dataService.getCategory(this.limitCategory).subscribe(data => {
+    this.http.getItem<CategoryCard[]>(`${environment.category.get}`).subscribe((data) => {
       this.category = data;
     });
-
-    this.dataService.getUsersInfo(this.limitUsers).subscribe(data => {
+    this.http.getItem<UsersCard[]>(`${environment.usersInfo.get}?_start=0&_end=4`).subscribe((data) => {
       this.usersInfo = data;
+    });
+    this.http.getItem<AllPosts[]>(`${environment.posts.get}`).subscribe((data) => {
+      this.posts = data;
+    });
+    this.http.getItem<AllPosts[]>(`${environment.posts.get}?_start=1&_end=2`).subscribe((data) => {
+      this.singlPost = data;
     });
   }
 }

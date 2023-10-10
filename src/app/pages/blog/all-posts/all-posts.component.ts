@@ -11,5 +11,6 @@ import { AllPosts } from 'src/app/modues/glob_muduls';
 export class AllPostsComponent {
   @Input() isCotugory: boolean = false;
   @Input() isBlog: boolean = false;
+  @Input() isHome: boolean = false;
   @Input('allpost') allPosts!:AllPosts
 }

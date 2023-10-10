@@ -1,7 +1,9 @@
 import { NgFor } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AllPosts } from 'src/app/modues/glob_muduls';
 import { AllPostsComponent } from '../blog/all-posts/all-posts.component';
+import { HttpService } from 'src/app/service/http.service';
+import { environment } from 'src/environment/environment';
 
 @Component({
   standalone:true,
@@ -13,57 +15,14 @@ import { AllPostsComponent } from '../blog/all-posts/all-posts.component';
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.css']
 })
-export class CategoryComponent {
-  posts:AllPosts[] = [
-    {
-      id: 1,
-      image:'assets/img/blog_main/blog_section_1_img_1.png',
-      category: 'Startup',
-      title: 'Design tips for designers that cover everything you need',
-      short_description:`Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum
-                        dolore eu fugiat nulla pariatur. Excepteur sint
-                        occaecat cupidatat non proident.`
-    },
-    {
-      id: 2,
-      image:'assets/img/blog_main/blog_section_1_img_2.png',
-      category: 'BUSINESS',
-      title: 'How to build rapport with your web design clients',
-      short_description:`Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum
-                        dolore eu fugiat nulla pariatur. Excepteur sint
-                        occaecat cupidatat non proident.`
-    },
-    {
-      id: 3,
-      image:'assets/img/blog_main/blog_section_1_img_3.png',
-      category: 'Startup',
-      title: 'Logo design trends to avoid in 2022',
-      short_description:`Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum
-                        dolore eu fugiat nulla pariatur. Excepteur sint
-                        occaecat cupidatat non proident.`
-    },
-    {
-      id: 4,
-      image:'assets/img/blog_main/blog_section_1_img_4.png',
-      category: 'TECHNOLOGY',
-      title: '8 Figma design systems you can download for free today',
-      short_description:`Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum
-                        dolore eu fugiat nulla pariatur. Excepteur sint
-                        occaecat cupidatat non proident.`
-    },
-    {
-      id: 5,
-      image:'assets/img/blog_main/blog_section_1_img_1.png',
-      category: 'Startup',
-      title: 'Font sizes in UI design: The complete guide to follow',
-      short_description:`Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum
-                        dolore eu fugiat nulla pariatur. Excepteur sint
-                        occaecat cupidatat non proident.`
-    },
-  ]
+export class CategoryComponent implements OnInit{
+  posts:AllPosts[] = []
+
+  constructor(private http:HttpService){}
+  ngOnInit(): void {
+    this.http.getItem<AllPosts[]>(`${environment.posts.get}?_end=4`).subscribe(data => {
+      this.posts = data
+    })
+  }
+
 }

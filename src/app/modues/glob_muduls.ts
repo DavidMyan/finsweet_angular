@@ -21,6 +21,8 @@ export interface AllPosts{
     category: string;
     title: string;
     short_description:string;
+    postUser?:string;
+    postData?:string;
 }
 export interface SingleAuthor{
     id: number;

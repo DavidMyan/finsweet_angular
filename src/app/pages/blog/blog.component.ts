@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AllPosts, CategoryCard } from 'src/app/modues/glob_muduls';
 import { AllPostsComponent } from './all-posts/all-posts.component';
 import { NgFor } from '@angular/common';
 import { JoinComponent } from '../home/join/join.component';
 import { CategoriesCardComponent } from "../home/categories-card/categories-card.component";
-import { DataService } from 'src/app/http.service';
-
+import { HttpService } from 'src/app/service/http.service';
+import { environment } from 'src/environment/environment';
 @Component({
     standalone: true,
     selector: 'app-blog',
@@ -18,21 +18,17 @@ import { DataService } from 'src/app/http.service';
         CategoriesCardComponent
     ]
 })
-export class BlogComponent {
+export class BlogComponent implements OnInit{
   posts:AllPosts[] = []
   category: CategoryCard[] = [];
-  limitCategory = 4;
-  limitPosts = 7;
 
-  constructor(private dataService: DataService) {}
-
+  constructor(private http:HttpService){}
   ngOnInit(): void {
-    this.dataService.getCategory(this.limitCategory).subscribe(data => {
-      this.category = data;
-    });
-    this.dataService.getPosts(this.limitPosts).subscribe(data =>{
+    this.http.getItem<AllPosts[]>(`${environment.posts.get}`).subscribe(data =>{
       this.posts = data
     })
-
+    this.http.getItem<CategoryCard[]>(`${environment.category.get}`).subscribe(data =>{
+      this.category = data
+    })
   }
 }
