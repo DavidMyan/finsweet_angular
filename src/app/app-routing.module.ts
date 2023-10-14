@@ -38,17 +38,17 @@ const routes: Routes = [
           title: 'Privacy-Policy'
         },
         {
-          path:'blog-post',
+          path:'blog-post/:id',
           loadComponent: () => import  ('./pages/blog-post/blog-post.component').then(m => m.BlogPostComponent),
           title: 'Blog Post'
         },
         {
-          path:'categories',
+          path:'categories/:category',
           loadComponent: () => import  ('./pages/category/category.component').then(m => m.CategoryComponent),
           title: 'Categories'
         },
         {
-          path:'authors',
+          path:'authors/:id',
           loadComponent: () => import  ('./pages/author/author.component').then(m => m.AuthorComponent),
           title: 'Authors'
         }
@@ -62,7 +62,9 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { scrollPositionRestoration: 'top' })
+    RouterModule.forRoot(routes,
+      //  { scrollPositionRestoration: 'top' }
+       )
   ],
   exports: [RouterModule]
 })

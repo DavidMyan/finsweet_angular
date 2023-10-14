@@ -40,11 +40,21 @@
   width: 294px;
   min-height: 312px;
 }
-
+.blog-section__1_box-elm-2-card-img-item{
+    width: 490px;
+    height: 318px;
+    object-fit: cover;
+}
+.cotugory_section-width{
+    object-fit: cover;
+}
 .blog-section__1_box-elm-2-card-margin-top{
     margin-top: 64px;
 }
-
+.blog-section__1_box-elm-2-card-img{
+    width: 490px;
+    height: 318px;   
+}
 @media (max-width: 1280px) {
     .blog-section__1_box-elm-2-card-text-title,
     .blog-section__1_box-elm-2-card-text-elm-2 {

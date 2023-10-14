@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class HttpService {
+  getUserInfo: any;
   
   constructor(private http:HttpClient) { }
   getItem<type>(url:string){

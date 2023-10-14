@@ -20,7 +20,7 @@
 .section_5_box_1_elm_1_user_box_elm_1_img{
 	border-radius: 50%;
 }
-.section_5_box_1_elm_1_user_box_elm_1_name{
+.section_5_box_1_elm_1_user_box_elm_1_name > a{
 	font-family: Sen;
 	font-size: 28px;
 	font-weight: 700;

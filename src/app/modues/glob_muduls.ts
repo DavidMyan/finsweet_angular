@@ -8,6 +8,7 @@ export interface CategoryCard{
 export interface UsersCard{
     id:number;
     image:string;
+    fullImage:string
     name:string;
     short_description:string;
     facebook:string;
@@ -23,10 +24,4 @@ export interface AllPosts{
     short_description:string;
     postUser?:string;
     postData?:string;
-}
-export interface SingleAuthor{
-    id: number;
-    image:string;
-    title: string;
-    short_description:string;
 }

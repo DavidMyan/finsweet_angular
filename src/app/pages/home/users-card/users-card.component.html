@@ -1,10 +1,9 @@
-
-<div class="section_5_box_1_elm_1_user_box_elm_1">
+<div class="section_5_box_1_elm_1_user_box_elm_1" >
     <div class="section_5_box_1_elm_1_user_box_elm_1_img">
         <img src={{userCard.image}} alt="user_img">
     </div>
     <h3 class="section_5_box_1_elm_1_user_box_elm_1_name">
-        {{userCard.name}}
+        <a [routerLink]="['/authors',userCard.id]">{{userCard.name}}</a>
     </h3>
     <p class="section_5_box_1_elm_1_user_box_elm_1_info">
         {{userCard.short_description}}
@@ -14,7 +13,7 @@
             <img src={{userCard.facebook}} alt="facebook">
         </a>
         <a href="#" class="margin_left_16 section_5_box_1_elm_1_user_box_elm_1_social_box_link">
-            <img class="" src={{userCard.twiter}} alt="twiter">
+            <img class="" [src]= userCard.twiter alt="twiter">
         </a>
         <a href="#" class="margin_left_16 section_5_box_1_elm_1_user_box_elm_1_social_box_link">
             <img class="" src={{userCard.instagram}} alt="Instagram">

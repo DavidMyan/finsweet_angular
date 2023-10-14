@@ -1,14 +1,14 @@
-import { NgFor } from '@angular/common';
+import { NgFor,NgIf } from '@angular/common';
 import { Component, Input} from '@angular/core';
-import { SingleAuthor } from 'src/app/modues/glob_muduls';
+import { UsersCard } from 'src/app/modues/glob_muduls';
 
 @Component({
   standalone:true,
-  imports:[NgFor],
+  imports:[NgFor,NgIf],
   selector: 'app-single-author',
   templateUrl: './single-author.component.html',
   styleUrls: ['./single-author.component.css']
 })
 export class SingleAuthorComponent {
-@Input('author') author!:SingleAuthor
+@Input('author') user!:UsersCard
 }

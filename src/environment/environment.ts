@@ -9,7 +9,4 @@ export const environment = {
     posts:{
         get:host + 'posts'
     },
-    singleAuthor:{
-        get:host + 'singleAuthor'
-    }
 }

@@ -33,7 +33,7 @@
                          src={{value.image}} alt="section_1img">
                     </div>
                     <p class="section_1_box_1_elm_1_img_box_text_elm_1">
-                        By <span>{{value.postUser}}</span>   l   {{value.postData}}
+                        By <span>{{value.postUser}}</span> l {{value.postData}}
                     </p>
                     <h3 class="section_1_box_1_elm_1_img_box_text_elm_2">
                         {{value.title}}
@@ -59,7 +59,7 @@
                         </p>
                     </div>
                     <div class="section_1_box_2_elm_2_shape_box">
-                        <div  *ngFor="let value of posts">
+                        <div  *ngFor="let value of posts" [routerLink]="['/id',value.id]">
                             <div class="section_1_box_2_elm_2_shape_box_elm_1">
                                 <p class="section_1_box_2_elm_2_shape_box_elm_1_text">
                                     By <span>{{value.postUser}}</span>   l   {{value.postData}}
@@ -122,7 +122,7 @@
         </div>
         <div class="section_4_box_1">
             <div class="section_4_box_1_elm_1">
-                <img src="assets/img/home_main/section_4_img.png" alt="section4_img" class="section_4_box_1_elm_1_img">
+                <img src="assets/img/post_imgs/post_img_1.jpg" alt="section4_img" class="section_4_box_1_elm_1_img">
             </div>
             <div class="section_4_box_1_elm_2">
                 <p class="section_4_box_1_elm_2_text_elm_1">
@@ -201,7 +201,7 @@
                     <div class="section_7_box_1_elm_2_text_user_box">
                         <div class="section_7_box_1_elm_2_text_user_box_info">
                             <div class="section_7_box_1_elm_2_text_user_box_info_img">
-                                <img src="assets/img/home_main/section_7_profile_logo.jpg" alt="profile_logo" class="section_7_box_1_elm_2_text_user_box_info_img_item">
+                                <img src="assets/img/authors_imgs/author_logo_9.jpg" alt="profile_logo" class="section_7_box_1_elm_2_text_user_box_info_img_item">
                             </div>
                             <div class="section_7_box_1_elm_2_text_user_box_info_box">
                                 <h2 class="section_7_box_1_elm_2_text_user_box_info_box_name">
@@ -229,4 +229,4 @@
             </div>
         </div>
     </div>
-<app-join></app-join> -->
+<app-join></app-join>

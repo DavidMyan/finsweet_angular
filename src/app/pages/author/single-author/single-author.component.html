@@ -1,13 +1,13 @@
-<div class="author__section_1-box">
+<div class="author__section_1-box" *ngIf="user">
     <div class="author__section_1-box-user">
-        <img src={{author.image}} alt="User_img" class="author__section_1-box-user-img">
+        <img src={{user.fullImage}} alt="User_img" class="author__section_1-box-user-img">
     </div>
     <div class="author__section_1-box-text">
         <h1 class="author__section_1-box-text-title">
-            {{author.title}}
+            "Hey there, I’m {{user.name}} and welcome to my Blog",
         </h1>
         <p class="author__section_1-box-text-par">
-            {{author.short_description}}						
+            {{user.short_description}}						
         </p>
         <div class="author__section_1-box-text-social_logo">
             <a class="author__section_1-box-text-social_logo-link" href="#">

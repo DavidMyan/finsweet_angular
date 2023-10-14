@@ -4,30 +4,30 @@
                 <div class="blog_post-section__1-box-elm-1">
                     <div class="blog_post-section__1-box-elm-1-user-info">
                         <div class="blog_post-section__1-box-elm-1-user-info-img">
-                            <img src="assets/img/home_main/section_7_profile_logo.jpg" alt="profile_logo" class="blog_post-section__1-box-elm-1-user-info-img_item">
+                            <img src={{correctPost.image}} alt="profile_logo" class="blog_post-section__1-box-elm-1-user-info-img_item">
                         </div>
                         <div class="blog_post-section__1-box-elm-1-user-info-box">
                             <h3 class="blog_post-section__1-box-elm-1-user-info-box-name">
-                                Andrew Jonson
+                                {{correctPost.postUser}}
                             </h3>
                             <p class="blog_post-section__1-box-elm-1-user-info-box-posted_date">
-                                Posted on 27th January 2022
+                                Posted on {{correctPost.postData}}
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="blog_post-section__1-box-elm-2">
                     <h1 class="blog_post-section__1-box-elm-2-title">
-                        Step-by-step guide to choosing great font pairs
+                        {{correctPost.title}}
                     </h1>
                 </div>
                 <div class="blog_post-section__1-box-elm-3">
                     <div class="blog_post-section__1-box-elm-3-shuttle-logo">
-                        <img src="assets/img/blog_post_main/shuttle.png" alt="shuttle" class="blog_post-section__1-box-elm-3-shuttle-logo-img">
+                        <img src="../../../assets/img/category/icon_1.png" alt="shuttle" class="blog_post-section__1-box-elm-3-shuttle-logo-img">
                     </div>
                     <div class="blog_post-section__1-box-elm-3-text">
                         <h4 class="blog_post-section__1-box-elm-3-text-title">
-                            Startup
+                            {{correctPost.category}}
                         </h4>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
     <div class="blog_post-section__2">
         <div class="container">
             <div class="blog_post-section__2-img">
-                <img src="assets/img/blog_post_main/section_2_backgraund.png" alt="section_2_backgraund" class="blog_post-section__2-img-item">
+                <img src={{correctPost.image}} alt="section_2_backgraund" class="blog_post-section__2-img-item">
             </div>
         </div>
     </div>
@@ -51,14 +51,7 @@
                             sed do eiusmod.
                         </h2>
                         <p class="blog_post-section__3-box-elm-1-text-coment-elm-1">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Non blandit massa enim nec. Scelerisque viverra mauris
-                            in aliquam sem. At risus viverra adipiscing at in tellus.
-                            Sociis natoque penatibus et magnis dis parturient montes.
-                            Ridiculus mus mauris vitae ultricies leo. Neque egestas 
-                            congue quisque egestas diam. Risus in hendrerit gravida 
-                            rutrum quisque non.
+                            {{correctPost.short_description}}
                         </p>
                     </div>
                 </div>
