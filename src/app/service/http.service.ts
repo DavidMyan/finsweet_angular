@@ -8,6 +8,12 @@ export class HttpService {
   
   constructor(private http:HttpClient) { }
   getItem<type>(url:string){
-    return this.http.get<type>(url)
+    return this.http.get<type>(url);
+  }
+  postItem<Type>(url:string,item:Type){
+    return this.http.post<Type>(url,item);
+  }
+  deletItem<Type>(url:string,item:Type){
+    return this.http.post<Type>(url,item);
   }
 }

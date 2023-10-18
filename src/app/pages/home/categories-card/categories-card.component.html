@@ -1,9 +1,9 @@
-<div class="section_3_box_1_elm_1_box_elm_1"  [routerLink]="['/categories',category.title.toLowerCase()]">
+<div class="section_3_box_1_elm_1_box_elm_1">
     <div class="section_3_box_1_elm_1_box_elm_1_icon">
         <img class="section_3_box_1_elm_1_box_elm_1_icon_img" src={{category.image}} alt="icon">
     </div>
     <h3 class="section_3_box_1_elm_1_box_elm_1_title">
-        <a>{{category.title}}</a>
+        <a [routerLink]="['/categories',category.title.toLowerCase()]">{{category.title}}</a>
     </h3>
     <div class="section_3_box_1_elm_1_box_elm_1_text">
         {{category.short_description}}

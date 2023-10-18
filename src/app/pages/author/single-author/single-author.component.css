@@ -30,6 +30,7 @@
 .author__section_1-box-user{
 	width: 251px;
 	height: 294px;
+	object-fit: cover;
 }
 
 @media (max-width: 1280px) {

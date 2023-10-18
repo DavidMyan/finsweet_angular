@@ -194,7 +194,8 @@
 	font-size: 28px;
 	font-weight: 700;
 	line-height: 40px;
-	letter-spacing: -1px;	
+	letter-spacing: -1px;
+	cursor: pointer;
 }
 .section_1_box_1_elm_1_img_box_text_elm_3{
 	width: 551px;
@@ -270,7 +271,7 @@
 	line-height: 20px;
 	color: #4C4C4C;
 }
-.section_1_box_2_elm_2_shape_box_elm_1_text > span{
+.section_1_box_2_elm_2_shape_box_elm_1_text > a{
 	color: #592EA9;
 }
 .section_1_box_2_elm_2_shape_box_elm_1_text_title{

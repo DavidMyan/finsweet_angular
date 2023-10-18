@@ -19,9 +19,11 @@ export interface UsersCard{
 export interface AllPosts{
     id: number;
     image:string;
+    categoryImg:string;
     category: string;
     title: string;
     short_description:string;
     postUser?:string;
     postData?:string;
+    postUserImg:string;
 }

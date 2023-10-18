@@ -1,0 +1,25 @@
+.mat_drawer{
+    width: 15%;
+}
+.global_button{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    font-size: 25px;
+    justify-content: flex-start;
+}
+.button_icon{
+    font-size: 40px;
+}
+.global_button > .button_icon {
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
+}
+.menu_buttons{
+    padding: 20px;
+}
+mat-toolbar{
+    display: flex;
+    justify-content: space-between;
+}

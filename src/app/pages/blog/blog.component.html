@@ -41,12 +41,12 @@
                         <app-all-posts [isBlog]="true" *ngFor="let value of posts" [allpost]="value"></app-all-posts>
                     </div>
 
-                    <div class="blog-section__1_box-elm-2-action-btn">
-                        <div class="blog-section__1_box-elm-2-action-btn-prev ">
-                            <a href="#" class="blog-section__1_box-elm-2-action-btn-prev-link blog-section__1_box-elm-2-action-btn-link-hover">&#60; Prev</a>
+                    <div class="blog-section__1_box-elm-2-action-btn"*ngIf="posts.length <= 4">
+                        <div class="blog-section__1_box-elm-2-action-btn-prev" *ngIf="currentPage > 1">
+                            <a (click)="prevPage()" class="blog-section__1_box-elm-2-action-btn-prev-link blog-section__1_box-elm-2-action-btn-link-hover">&#60; Prev</a>
                         </div>
-                        <div class="blog-section__1_box-elm-2-action-btn-next ">
-                            <a href="#" class="blog-section__1_box-elm-2-action-btn-next-link blog-section__1_box-elm-2-action-btn-link-hover">Next &#62;</a>
+                        <div class="blog-section__1_box-elm-2-action-btn-next" *ngIf="posts.length >= 4 || posts.length == 0">
+                            <a (click)="nextPage()" class="blog-section__1_box-elm-2-action-btn-next-link blog-section__1_box-elm-2-action-btn-link-hover">Next &#62;</a>
                         </div>
                     </div>
                 </div>

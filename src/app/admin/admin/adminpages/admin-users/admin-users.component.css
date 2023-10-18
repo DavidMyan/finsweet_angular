@@ -1,0 +1,15 @@
+table {
+    width: 100%;
+  }
+  .user_avatar{
+    width: 30px;
+  }
+  .user_avatar:hover{
+    width: 100px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  .avatar_call{
+    position: relative;
+  }

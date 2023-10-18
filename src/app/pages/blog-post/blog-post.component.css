@@ -68,6 +68,11 @@
     width: 405px;
     height: 318px;
 }
+.blog_post-section__1-box-elm-1-user-info-img_item{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
 @media (max-width: 1280px) {
     .container{
 		width: 1040px;

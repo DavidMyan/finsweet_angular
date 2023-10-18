@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { CategoriesCardComponent } from "./categories-card/categories-card.component";
 import { UsersCardComponent } from "./users-card/users-card.component";
 import { JoinComponent } from "./join/join.component";
@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
   posts: AllPosts[] = [];
   singlPost: AllPosts[] =[];
  
-  constructor(private http: HttpService ,) {}
+  constructor(private http: HttpService) {}
 
   ngOnInit(): void {
     this.http.getItem<CategoryCard[]>(`${environment.category.get}`).subscribe((data) => {

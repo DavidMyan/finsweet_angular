@@ -1,6 +1,6 @@
-<div class="author__section_1">
+<div class="author__section_1" *ngIf="user">
     <div class="container_author">
-        <app-single-author [author]="user"></app-single-author>
+        <app-single-author [author]="user[0]"></app-single-author>
     </div>
 </div>
 <div class="author__section_2">
@@ -8,7 +8,7 @@
         <div class="author__section_2-box">
             <div class="author__section_2-box-elm-1-block">
                 <div class="posts_flex">
-                    <app-all-posts *ngFor="let value of posts" [allpost]="value"></app-all-posts>
+                    <app-all-posts [isAuthor]="true" *ngFor="let value of posts" [allpost]="value"></app-all-posts>
                 </div> 
             </div>
         </div>

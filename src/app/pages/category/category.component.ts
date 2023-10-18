@@ -30,14 +30,12 @@ export class CategoryComponent implements OnInit {
     this.route.params.subscribe(category => {
       this.selectedCategory = category['category'];
       this.http.getItem<AllPosts[]>(`${environment.posts.get}`).subscribe(data => {
-        this.filteredPosts = data.filter(post => post.category.toLowerCase() === this.selectedCategory && post.category.toLowerCase() === this.selectedCategory);
+        this.filteredPosts = data.filter(post => post.category.toLowerCase() === this.selectedCategory);
       });
     });
     this.http.getItem<CategoryCard[]>(`${environment.category.get}`).subscribe(data => {
       this.category = data;
     });
-    console.log(this.selectedCategory);
-    
   }
 
   isActive: boolean = false;

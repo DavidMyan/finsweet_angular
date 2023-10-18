@@ -181,7 +181,7 @@
     line-height: 32px;
     letter-spacing: 0px;
     color: #6D6E76;
-
+    cursor: pointer;
 }
 .blog-section__1_box-elm-2-action-btn{
     display: flex;

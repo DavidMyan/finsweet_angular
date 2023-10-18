@@ -1,13 +1,15 @@
-    <div class="blog_post-section__1">
+<div *ngIf="correctPost">
+    <div class="blog_post-section__1" >
         <div class="container-blog_post-section__1">
             <div class="blog_post-section__1-box">
                 <div class="blog_post-section__1-box-elm-1">
                     <div class="blog_post-section__1-box-elm-1-user-info">
                         <div class="blog_post-section__1-box-elm-1-user-info-img">
-                            <img src={{correctPost.image}} alt="profile_logo" class="blog_post-section__1-box-elm-1-user-info-img_item">
+                            <img src={{correctPost.postUserImg}} alt="profile_logo" class="blog_post-section__1-box-elm-1-user-info-img_item">
                         </div>
                         <div class="blog_post-section__1-box-elm-1-user-info-box">
-                            <h3 class="blog_post-section__1-box-elm-1-user-info-box-name">
+                            <h3 class="blog_post-section__1-box-elm-1-user-info-box-name"
+                            [routerLink]="['/authors',correctPost.postUser]">
                                 {{correctPost.postUser}}
                             </h3>
                             <p class="blog_post-section__1-box-elm-1-user-info-box-posted_date">
@@ -23,7 +25,7 @@
                 </div>
                 <div class="blog_post-section__1-box-elm-3">
                     <div class="blog_post-section__1-box-elm-3-shuttle-logo">
-                        <img src="../../../assets/img/category/icon_1.png" alt="shuttle" class="blog_post-section__1-box-elm-3-shuttle-logo-img">
+                        <img src={{correctPost.categoryImg}} alt="shuttle" class="blog_post-section__1-box-elm-3-shuttle-logo-img">
                     </div>
                     <div class="blog_post-section__1-box-elm-3-text">
                         <h4 class="blog_post-section__1-box-elm-3-text-title">
@@ -143,9 +145,9 @@
                                 <p class="blog_post-section__4-box-elm-2-posts-box-elm-2-text-date">
                                     By <span>{{value.postUser}}</span> l   {{value.postData}}
                                 </p>
-                                <h3 class="blog_post-section__4-box-elm-2-posts-box-elm-2-text-title">
+                                <a class="blog_post-section__4-box-elm-2-posts-box-elm-2-text-title" [routerLink]="['/blog-post',value.id]">
                                     {{value.title}}
-                             </h3>
+                                </a>
                                 <p class="blog_post-section__4-box-elm-2-posts-box-elm-2-text-coment">
                                     {{value.short_description}}
                                 </p>
@@ -157,3 +159,5 @@
         </div>
     </div>
     <app-join></app-join>
+
+</div>

@@ -30,182 +30,208 @@
       "id": 1,
       "image": "assets/img/post_imgs/post_img_4.jpg",
       "category": "Startup",
+      "categoryImg": "assets/img/category/icon_2.png",
       "title": "Design tips for designers that cover everything you need",
       "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
       "postUser": "Floyd Miles",
-      "postData": "May 23, 2022"
+      "postData": "May 23, 2022",
+      "postUserImg": "assets/img/authors_imgs/author_logo_1.png"
     },
     {
       "id": 2,
       "image": "assets/img/post_imgs/post_img_5.jpg",
       "category": "TECHNOLOGY",
+      "categoryImg": "assets/img/category/icon_4.png",
       "title": "How to build rapport with your web design clients",
       "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
       "postUser": "Dianne Russell",
-      "postData": "May 23, 2022"
+      "postData": "May 23, 2022",
+      "postUserImg": "assets/img/authors_imgs/author_logo_2.png"
     },
     {
       "id": 3,
-      "image": "assets/img/post_imgs/post_img_6.jpg",
+      "image": "assets/img/post_imgs/post_img_3.jpg",
       "category": "BUSINESS",
+      "categoryImg": "assets/img/category/icon_1.png",
       "title": "Design tips for designers that cover everything you need",
       "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
       "postUser": "Dianne Russell",
-      "postData": "May 23, 2022"
+      "postData": "May 23, 2022",
+      "postUserImg": "assets/img/authors_imgs/author_logo_2.png"
     },
     {
       "id": 4,
       "image": "assets/img/post_imgs/post_img_8.jpg",
       "category": "BUSINESS",
+      "categoryImg": "assets/img/category/icon_1.png",
       "title": "How to build rapport with your web design clients",
       "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
       "postUser": "Jenny Wilson",
-      "postData": "May 23, 2022"
+      "postData": "May 23, 2022",
+      "postUserImg": "assets/img/authors_imgs/author_logo_3.png"
     },
     {
       "id": 5,
       "image": "assets/img/post_imgs/post_img_10.jpg",
       "category": "Startup",
+      "categoryImg": "assets/img/category/icon_2.png",
       "title": "Logo design trends to avoid in 2022",
       "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
       "postUser": "Leslie Alexander",
-      "postData": "May 23, 2022"
+      "postData": "May 23, 2022",
+      "postUserImg": "assets/img/authors_imgs/author_logo_4.png"
     },
     {
       "id": 6,
       "image": "assets/img/post_imgs/post_img_11.jpg",
       "category": "TECHNOLOGY",
+      "categoryImg": "assets/img/category/icon_4.png",
       "title": "8 Figma design systems you can download for free today",
       "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
       "postUser": "Leslie Alexander",
-      "postData": "May 23, 2022"
+      "postData": "May 23, 2022",
+      "postUserImg": "assets/img/authors_imgs/author_logo_4.png"
     },
     {
       "id": 7,
       "image": "assets/img/post_imgs/post_img_12.jpg",
       "category": "Startup",
+      "categoryImg": "assets/img/category/icon_2.png",
       "title": "Font sizes in UI design: The complete guide to follow",
       "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
       "postUser": "Guy Hawkins",
-      "postData": "May 23, 2022"
+      "postData": "May 23, 2022",
+      "postUserImg": "assets/img/authors_imgs/author_logo_5.png"
     },
     {
       "id": 8,
       "image": "assets/img/post_imgs/post_img_15.jpg",
       "category": "Startup",
-      "title": "Font sizes in UI design: The complete guide to follow",
+      "categoryImg": "assets/img/category/icon_2.png",
+      "title": "UI design: The complete guide to follow",
       "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
       "postUser": "Eleanor Pena",
-      "postData": "May 23, 2022"
+      "postData": "May 23, 2022",
+      "postUserImg": "assets/img/authors_imgs/author_logo_6.png"
     },
     {
       "id": 8,
       "image": "assets/img/post_imgs/post_img_16.jpg",
       "category": "Startup",
-      "title": "Font sizes in UI design: The complete guide to follow",
+      "categoryImg": "assets/img/category/icon_2.png",
+      "title": "Sizes in UI design: The complete guide to follow",
       "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
       "postUser": "Jacob Jones",
-      "postData": "May 23, 2022"
+      "postData": "May 23, 2022",
+      "postUserImg": "assets/img/authors_imgs/author_logo_8.png"
     },
     {
       "id": 9,
-      "image": "assets/img/post_imgs/post_img_16.jpg",
+      "image": "assets/img/post_imgs/post_img_17.jpg",
       "category": "Economy",
-      "title": "Font sizes in UI design: The complete guide to follow",
+      "categoryImg": "assets/img/category/icon_3.png",
+      "title": "The complete guide to follow",
       "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-      "postUser": "Robert Fox",
-      "postData": "May 23, 2022"
+      "postUser": "Jacob Jones",
+      "postData": "May 23, 2022",
+      "postUserImg": "assets/img/authors_imgs/author_logo_8.png"
     }
-    
   ],
-    "usersInfo": [
-      {
-        "id": 1,
-        "image": "assets/img/authors_imgs/author_logo_1.png",
-        "fullImage":"assets/img/authors_imgs/author_1.png",
-        "name": "Floyd Miles",
-        "short_description": "Content Writer @Company",
-        "facebook": "assets/img/footer/facebook.png",
-        "twiter": "assets/img/footer/twiter.png",
-        "instagram": "assets/img/footer/instagram.png",
-        "in": "assets/img/footer/in.png"
-      },
-      {
-        "id": 2,
-        "image": "assets/img/authors_imgs/author_logo_2.png",
-        "fullImage":"assets/img/authors_imgs/author_2.png",
-        "name": "Dianne Russell",
-        "short_description": "Content Writer @Company",
-        "facebook": "assets/img/footer/facebook.png",
-        "twiter": "assets/img/footer/twiter.png",
-        "instagram": "assets/img/footer/instagram.png",
-        "in": "assets/img/footer/in.png"
-      },
-      {
-        "id": 3,
-       "image": "assets/img/authors_imgs/author_logo_3.png",
-       "fullImage":"assets/img/authors_imgs/author_3.png",
-        "name": "Jenny Wilson",
-        "short_description": "Content Writer @Company",
-        "facebook": "assets/img/footer/facebook.png",
-        "twiter": "assets/img/footer/twiter.png",
-        "instagram": "assets/img/footer/instagram.png",
-        "in": "assets/img/footer/in.png"
-      },
-      {
-        "id": 4,
-        "image": "assets/img/authors_imgs/author_logo_4.png",
-       "fullImage":"assets/img/authors_imgs/author_4.png",
-        "name": "Leslie Alexander",
-        "short_description": "Content Writer @Company",
-        "facebook": "assets/img/footer/facebook.png",
-        "twiter": "assets/img/footer/twiter.png",
-        "instagram": "assets/img/footer/instagram.png",
-        "in": "assets/img/footer/in.png"
-      },
-      {
-        "id": 5,
-       "image": "assets/img/authors_imgs/author_logo_5.png",
-        "fullImage":"assets/img/authors_imgs/author_5.png",
-        "name": "Guy Hawkins",
-        "short_description": "Content Writer @Company",
-        "facebook": "assets/img/footer/facebook.png",
-        "twiter": "assets/img/footer/twiter.png",
-        "instagram": "assets/img/footer/instagram.png",
-        "in": "assets/img/footer/in.png"
-      },
-      {
-        "id": 6,
-        "image": "assets/img/authors_imgs/author_logo_6.png",
-        "fullImage":"assets/img/authors_imgs/author_6.png",
-        "name": "Eleanor Pena",
-        "short_description": "Content Writer @Company",
-        "facebook": "assets/img/footer/facebook.png",
-        "twiter": "assets/img/footer/twiter.png",
-        "instagram": "assets/img/footer/instagram.png",
-        "in": "assets/img/footer/in.png"
-      },
-      {
-        "id": 7,
-        "image": "assets/img/authors_imgs/author_logo_7.png",
-        "fullImage":"assets/img/authors_imgs/author_7.png",
-        "name": "Robert Fox",
-        "short_description": "Content Writer @Company",
-        "facebook": "assets/img/footer/facebook.png",
-        "twiter": "assets/img/footer/twiter.png",
-        "instagram": "assets/img/footer/instagram.png",
-        "in": "assets/img/footer/in.png"
-      },
-      {
-        "id": 8,
-        "image": "assets/img/authors_imgs/author_logo_8.png",
-        "fullImage":"assets/img/authors_imgs/author_8.png",
-        "name": "Jacob Jones",
-        "short_description": "Content Writer @Company",
-        "facebook": "assets/img/footer/facebook.png",
-        "twiter": "assets/img/footer/twiter.png",
-        "instagram": "assets/img/footer/instagram.png",
-        "in": "assets/img/footer/in.png"
-      }
-    ]
+  "usersInfo": [
+    {
+      "id": 1,
+      "image": "assets/img/authors_imgs/author_logo_1.png",
+      "fullImage": "assets/img/authors_imgs/author_1.png",
+      "name": "Floyd Miles",
+      "short_description": "Content Writer @Company",
+      "facebook": "assets/img/footer/facebook.png",
+      "twiter": "assets/img/footer/twiter.png",
+      "instagram": "assets/img/footer/instagram.png",
+      "in": "assets/img/footer/in.png"
+    },
+    {
+      "id": 2,
+      "image": "assets/img/authors_imgs/author_logo_2.png",
+      "fullImage": "assets/img/authors_imgs/author_2.png",
+      "name": "Dianne Russell",
+      "short_description": "Content Writer @Company",
+      "facebook": "assets/img/footer/facebook.png",
+      "twiter": "assets/img/footer/twiter.png",
+      "instagram": "assets/img/footer/instagram.png",
+      "in": "assets/img/footer/in.png"
+    },
+    {
+      "id": 3,
+      "image": "assets/img/authors_imgs/author_logo_3.png",
+      "fullImage": "assets/img/authors_imgs/author_3.png",
+      "name": "Jenny Wilson",
+      "short_description": "Content Writer @Company",
+      "facebook": "assets/img/footer/facebook.png",
+      "twiter": "assets/img/footer/twiter.png",
+      "instagram": "assets/img/footer/instagram.png",
+      "in": "assets/img/footer/in.png"
+    },
+    {
+      "id": 4,
+      "image": "assets/img/authors_imgs/author_logo_4.png",
+      "fullImage": "assets/img/authors_imgs/author_4.png",
+      "name": "Leslie Alexander",
+      "short_description": "Content Writer @Company",
+      "facebook": "assets/img/footer/facebook.png",
+      "twiter": "assets/img/footer/twiter.png",
+      "instagram": "assets/img/footer/instagram.png",
+      "in": "assets/img/footer/in.png"
+    },
+    {
+      "id": 5,
+      "image": "assets/img/authors_imgs/author_logo_5.png",
+      "fullImage": "assets/img/authors_imgs/author_5.png",
+      "name": "Guy Hawkins",
+      "short_description": "Content Writer @Company",
+      "facebook": "assets/img/footer/facebook.png",
+      "twiter": "assets/img/footer/twiter.png",
+      "instagram": "assets/img/footer/instagram.png",
+      "in": "assets/img/footer/in.png"
+    },
+    {
+      "id": 6,
+      "image": "assets/img/authors_imgs/author_logo_6.png",
+      "fullImage": "assets/img/authors_imgs/author_6.png",
+      "name": "Eleanor Pena",
+      "short_description": "Content Writer @Company",
+      "facebook": "assets/img/footer/facebook.png",
+      "twiter": "assets/img/footer/twiter.png",
+      "instagram": "assets/img/footer/instagram.png",
+      "in": "assets/img/footer/in.png"
+    },
+    {
+      "id": 7,
+      "image": "assets/img/authors_imgs/author_logo_7.png",
+      "fullImage": "assets/img/authors_imgs/author_7.png",
+      "name": "Robert Fox",
+      "short_description": "Content Writer @Company",
+      "facebook": "assets/img/footer/facebook.png",
+      "twiter": "assets/img/footer/twiter.png",
+      "instagram": "assets/img/footer/instagram.png",
+      "in": "assets/img/footer/in.png"
+    },
+    {
+      "id": 8,
+      "image": "assets/img/authors_imgs/author_logo_8.png",
+      "fullImage": "assets/img/authors_imgs/author_8.png",
+      "name": "Jacob Jones",
+      "short_description": "Content Writer @Company",
+      "facebook": "assets/img/footer/facebook.png",
+      "twiter": "assets/img/footer/twiter.png",
+      "instagram": "assets/img/footer/instagram.png",
+      "in": "assets/img/footer/in.png"
+    }
+  ],
+  "users": [
+    {
+      "email": "floyd@mail.ru",
+      "password": "$2a$10$9cTqCRvDPQ9vv1.2EU.Nx.KbtwyzSi.L8l6C7L73c7kbbIq7XJ1jm",
+      "id": 1
+    }
+  ]
 }

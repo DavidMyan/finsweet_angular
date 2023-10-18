@@ -1,6 +1,9 @@
+import { AdminUsersComponent } from './admin/admin/adminpages/admin-users/admin-users.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
+import { loginGuard } from './guards/login.guard';
+import { adminGuard } from './guards/admin.guard';
 
 const routes: Routes = [
   {
@@ -40,7 +43,8 @@ const routes: Routes = [
         {
           path:'blog-post/:id',
           loadComponent: () => import  ('./pages/blog-post/blog-post.component').then(m => m.BlogPostComponent),
-          title: 'Blog Post'
+          title: 'Blog Post',
+          pathMatch: 'full'
         },
         {
           path:'categories/:category',
@@ -48,12 +52,36 @@ const routes: Routes = [
           title: 'Categories'
         },
         {
-          path:'authors/:id',
+          path:'authors/:name',
           loadComponent: () => import  ('./pages/author/author.component').then(m => m.AuthorComponent),
           title: 'Authors'
         }
       ]
     },
+    {
+      path:'admin/login',
+      loadComponent: () => import  ('./admin/login/login.component').then(m => m.LoginComponent),
+      title: 'Login',
+      canActivate:[loginGuard]
+    },
+    {
+      path:'admin',
+      loadComponent: () => import  ('./admin/admin/admin.component').then(m => m.AdminComponent),
+      title: 'Admin',
+      canActivateChild:[adminGuard],
+      children:[
+         {
+          path:'',
+          loadComponent: () => import  ('./admin/admin/adminpages/dashboardadmin/dashboardadmin.component').then(m => m.DashboardadminComponent),
+          title: 'Dashpord'
+         },
+         {
+          path:'usersinfo',
+          loadComponent: () => import  ('./admin/admin/adminpages/admin-users/admin-users.component').then(m => m.AdminUsersComponent),
+          title: 'Users Info'
+         }
+      ]
+    },                                    
     {
       path:'**',
       loadComponent: () => import  ('./pages/pages-not-found/pages-not-found.component').then(m => m.PagesNotFoundComponent),
@@ -63,7 +91,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes,
-      //  { scrollPositionRestoration: 'top' }
+       { scrollPositionRestoration: 'top' }
        )
   ],
   exports: [RouterModule]
