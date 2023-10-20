@@ -6,6 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PagesNotFoundComponent } from './pages/pages-not-found/pages-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
     declarations: [
@@ -15,10 +18,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     providers: [],
     bootstrap: [AppComponent],
     imports: [
+        MatDialogModule,
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
         BrowserAnimationsModule,
+        MatFormFieldModule,
+        MatInputModule,
     ]
 })
 export class AppModule { }

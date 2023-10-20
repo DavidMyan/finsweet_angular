@@ -1,0 +1,57 @@
+<button mat-raised-button color="primary" (click)="openAddDialog()">Add Post</button>
+<table mat-table [dataSource]="postTableItem" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Image">
+      <th mat-header-cell *matHeaderCellDef> Image </th>
+      <td mat-cell *matCellDef="let element" class="avatar_call"> 
+        <img class="post_image-item" src={{element.image}} alt="post_image-item">
+     </td>
+    </ng-container>
+
+    <ng-container matColumnDef="postusername">
+        <th mat-header-cell *matHeaderCellDef> Post User Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.postUser}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="categoryname">
+        <th mat-header-cell *matHeaderCellDef> Category Name</th>
+        <td mat-cell *matCellDef="let element" >
+            <div class="category_td">
+                <img src={{element.categoryImg}} alt="categoryImg">{{element.category}}
+
+            </div>
+        </td>
+      </ng-container>
+
+    <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef> Title </th>
+        <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef> Description </th>
+        <td mat-cell *matCellDef="let element" class="description_post">
+            <div class="description_post-item">
+              {{element.short_description}}
+            </div>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Action">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let element"> 
+            <mat-icon class="material-symbols-outlined" (click)="openDeleteDialog(element.id)" >
+                delete
+            </mat-icon>
+            <mat-icon class="material-symbols-outlined" (click)="openEditDialog(element,element.id)">
+                edit
+            </mat-icon>
+        </td>
+      </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

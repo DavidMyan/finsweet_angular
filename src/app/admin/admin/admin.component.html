@@ -1,7 +1,6 @@
 <div>
     <mat-toolbar>
       <span>Finsweet Admin Page</span>
-      <button ></button>
       <button (click)="remuveToken()" mat-raised-button color="primary" class="logOut_button">
         <mat-icon class="material-symbols-outlined button_icon">logout</mat-icon>
         LogOut
@@ -11,25 +10,25 @@
   <mat-drawer-container class="example-container" [style.height]="window.innerHeight - 64 + 'px'">
     <mat-drawer mode="side" opened class="mat_drawer">
         <div class="menu_buttons">
-            <button mat-raised-button color="primary" class="global_button" routerLink="">
+            <button mat-raised-button color="primary" class="global_button" routerLink="dashpord">
                 <mat-icon class="button_icon material-symbols-outlined">view_comfy_alt</mat-icon>
                 Dashboard
             </button>
         </div>
         <div class="menu_buttons">
-            <button mat-raised-button color="primary" class="global_button" routerLink="usersinfo">
+            <button mat-raised-button color="primary" class="global_button" routerLink="admin-usersinfo">
                 <mat-icon class="material-symbols-outlined button_icon">group</mat-icon>
                 Users
             </button>
         </div>  
         <div class="menu_buttons">
-            <button mat-raised-button color="primary" class="global_button">
+            <button mat-raised-button color="primary" class="global_button" routerLink="admin-cotegory">
                 <mat-icon class="material-symbols-outlined button_icon">category</mat-icon>
                 Category
             </button>
         </div>  
         <div class="menu_buttons">
-            <button mat-raised-button color="primary" class="global_button">
+            <button mat-raised-button color="primary" class="global_button" routerLink="admin-post">
                 <mat-icon class="material-symbols-outlined button_icon">share</mat-icon>
                 Posts
             </button>

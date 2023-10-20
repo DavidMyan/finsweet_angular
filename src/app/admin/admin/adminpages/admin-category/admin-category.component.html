@@ -1,5 +1,5 @@
-<button mat-raised-button color="primary" >Add Post</button>
-<table mat-table [dataSource]="usersTableItem" class="mat-elevation-z8">
+<button mat-raised-button color="primary" (click)="openAddDialog()">Add Post</button>
+<table mat-table [dataSource]="categoryTableItem" class="mat-elevation-z8">
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef> Id </th>
       <td mat-cell *matCellDef="let element"> {{element.id}} </td>
@@ -8,27 +8,27 @@
     <ng-container matColumnDef="Image">
       <th mat-header-cell *matHeaderCellDef> Image </th>
       <td mat-cell *matCellDef="let element" class="avatar_call"> 
-        <img class="user_avatar" src={{element.fullImage}} alt="user_avata">
+        <img class="user_avatar" src={{element.image}} alt="user_avata">
      </td>
     </ng-container>
 
     <ng-container matColumnDef="Name">
         <th mat-header-cell *matHeaderCellDef> Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.title}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="Speciality">
-        <th mat-header-cell *matHeaderCellDef> Speciality </th>
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef> Description </th>
         <td mat-cell *matCellDef="let element"> {{element.short_description}} </td>
       </ng-container>
 
       <ng-container matColumnDef="Action">
         <th mat-header-cell *matHeaderCellDef> Action </th>
         <td mat-cell *matCellDef="let element"> 
-            <mat-icon class="material-symbols-outlined"  >
+            <mat-icon class="material-symbols-outlined" (click)="openDeleteDialog(element.id)" >
                 delete
             </mat-icon>
-            <mat-icon class="material-symbols-outlined">
+            <mat-icon class="material-symbols-outlined" (click)="openEditDialog(element,element.id)">
                 edit
             </mat-icon>
         </td>

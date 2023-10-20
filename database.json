@@ -1,10 +1,10 @@
 {
   "category": [
     {
-      "id": 1,
+      "title": "Businessd",
       "image": "assets/img/category/icon_1.png",
-      "title": "Business",
-      "short_description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+      "short_description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "id": 1
     },
     {
       "id": 2,
@@ -19,10 +19,10 @@
       "short_description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
     },
     {
-      "id": 4,
-      "image": "assets/img/category/icon_4.png",
       "title": "Technology",
-      "short_description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+      "image": "assets/img/category/icon_4.png",
+      "short_description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "id": 4
     }
   ],
   "posts": [
@@ -115,7 +115,7 @@
       "postUserImg": "assets/img/authors_imgs/author_logo_6.png"
     },
     {
-      "id": 8,
+      "id": 9,
       "image": "assets/img/post_imgs/post_img_16.jpg",
       "category": "Startup",
       "categoryImg": "assets/img/category/icon_2.png",
@@ -126,7 +126,7 @@
       "postUserImg": "assets/img/authors_imgs/author_logo_8.png"
     },
     {
-      "id": 9,
+      "id": 10,
       "image": "assets/img/post_imgs/post_img_17.jpg",
       "category": "Economy",
       "categoryImg": "assets/img/category/icon_3.png",

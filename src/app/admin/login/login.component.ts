@@ -1,5 +1,6 @@
-import {Component} from '@angular/core';
-import {FormControl, Validators,FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { Login } from './../../modues/glob_muduls';
+import { Component } from '@angular/core';
+import { FormControl, Validators,FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatIconModule} from '@angular/material/icon';
 import { MatDividerModule} from '@angular/material/divider';
 import { MatButtonModule} from '@angular/material/button';
@@ -22,15 +23,16 @@ export class LoginComponent {
 
   emailFormControl = new FormControl('', Validators.email);
   password = new FormControl('', [Validators.required]);
-  constructor(private http:HttpService,private router:Router){}
+
+  constructor(private http:HttpService, private router:Router){}
+  
   save(){
     let logReg = {
       email: this.emailFormControl.value,
       password: this.password.value,
+      accessToken: ''
     }
-    this.http.postItem<any>(`${environment.loginReg.get}`,logReg).subscribe(data =>{
-      console.log(data);
-      localStorage.setItem('userData',JSON.stringify(data.user))
+    this.http.addItem<Login>(`${environment.loginReg.get}`,logReg).subscribe(data =>{
       localStorage.setItem('token',JSON.stringify(data.accessToken))
       this.router.navigate(['/admin'])
     })

@@ -1,3 +1,4 @@
+import { AdminPostsComponent } from './admin/admin/adminpages/admin-posts/admin-posts.component';
 import { AdminUsersComponent } from './admin/admin/adminpages/admin-users/admin-users.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -71,14 +72,24 @@ const routes: Routes = [
       canActivateChild:[adminGuard],
       children:[
          {
-          path:'',
+          path:'dashpord',
           loadComponent: () => import  ('./admin/admin/adminpages/dashboardadmin/dashboardadmin.component').then(m => m.DashboardadminComponent),
           title: 'Dashpord'
          },
          {
-          path:'usersinfo',
+          path:'admin-usersinfo',
           loadComponent: () => import  ('./admin/admin/adminpages/admin-users/admin-users.component').then(m => m.AdminUsersComponent),
           title: 'Users Info'
+         },
+         {
+          path:'admin-cotegory',
+          loadComponent: () => import  ('./admin/admin/adminpages/admin-category/admin-category.component').then(m => m.AdminCategoryComponent),
+          title: 'Admin Cotegory'
+         },
+         {
+          path:'admin-post',
+          loadComponent: () => import  ('./admin/admin/adminpages/admin-posts/admin-posts.component').then(m => m.AdminPostsComponent),
+          title: 'Admin Posts'
          }
       ]
     },                                    

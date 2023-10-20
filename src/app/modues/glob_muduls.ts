@@ -27,3 +27,9 @@ export interface AllPosts{
     postData?:string;
     postUserImg:string;
 }
+export interface Login{
+    email:string | null,
+    password:string | null,
+    accessToken: string;
+
+}
