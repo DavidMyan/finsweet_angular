@@ -40,7 +40,7 @@ export class AdminPostsComponent implements OnInit {
     });
   }
   
-  openEditDialog(category: AllPosts,categoryId:number): void {
+  openEditDialog(post: AllPosts,postId: number): void {
     this.isDelete = false;
     this.isAdd = false;
     const dialogRef = this.dialog.open(DialogForPostsComponent, {
@@ -49,29 +49,20 @@ export class AdminPostsComponent implements OnInit {
         isDelete: this.isDelete,
         isAdd: this.isAdd,
         action: 'edit',
-        categoryData: { ...category } 
+        postId: postId, 
+        postData: { ...post } 
       }
     });
   
     dialogRef.afterClosed().subscribe(result => {
       if (result && result.data) {
-        const updatedCategoryData = result.data;
+        const updatedPostData = result.data;
         if (result.action === 'edit') {
-          dialogRef.componentInstance.forum.patchValue({
-            title: updatedCategoryData.title,
-            image: updatedCategoryData.image,
-            short_description: updatedCategoryData.short_description
-          });
-          this.http.editItem<AllPosts>(`${environment.category.edit}/${categoryId}`, updatedCategoryData).subscribe(() => {
-            this.getPost();
-          });
-        } else if (result.action === 'add') {
-          this.http.addItem<AllPosts>(`${environment.category.post}`, updatedCategoryData).subscribe(() => {
+          this.http.editItem<AllPosts>(`${environment.posts.edit}/${postId}`, updatedPostData).subscribe(() => {
             this.getPost();
           });
         }
       }
-      
     });
   }
   

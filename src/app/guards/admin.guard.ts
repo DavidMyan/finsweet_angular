@@ -1,7 +1,7 @@
 import { inject } from '@angular/core';
 import { CanActivateChildFn, Router } from '@angular/router';
 
-export const adminGuard: CanActivateChildFn = (childRoute, state) => {
+export const adminGuard: CanActivateChildFn = () => {
   const token = localStorage.getItem('token');
   const router:Router = inject(Router);
 if (token) { 
@@ -9,5 +9,4 @@ if (token) {
   }
 router.navigate(['/admin/login']);
 return false;
-
 };

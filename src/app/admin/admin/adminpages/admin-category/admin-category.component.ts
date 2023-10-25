@@ -19,7 +19,6 @@ export class AdminCategoryComponent implements OnInit{
   isAdd:boolean = false
   categoryTableItem:CategoryCard[] = []
   displayedColumns: string[] = ['id', 'Image' ,'Name', 'description','Action'];
-  dialogRef: any;
 
 constructor(private http:HttpService,public dialog: MatDialog){}
 

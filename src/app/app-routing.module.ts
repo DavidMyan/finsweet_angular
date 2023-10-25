@@ -1,5 +1,3 @@
-import { AdminPostsComponent } from './admin/admin/adminpages/admin-posts/admin-posts.component';
-import { AdminUsersComponent } from './admin/admin/adminpages/admin-users/admin-users.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';

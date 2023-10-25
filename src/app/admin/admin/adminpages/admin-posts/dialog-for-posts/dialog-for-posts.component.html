@@ -11,7 +11,7 @@
     </div>
 </div>
 <div>
-    <form class="example-form" *ngIf="action" [formGroup]="forum" (ngSubmit)="send()">
+      <form class="example-form" *ngIf="action" [formGroup]="forum" (ngSubmit)="send()">
         <mat-form-field>
             <mat-label>Enter Image</mat-label>
             <input matInput placeholder="Enter image URL" formControlName="image" required>
@@ -19,16 +19,22 @@
         </mat-form-field>
 
         <mat-form-field>
-            <mat-label>Enter User Post Name</mat-label>
-            <input matInput placeholder="Enter category name" formControlName="postUser" required>
-            <mat-error>{{ getErrorMessage('title') }}</mat-error> 
-        </mat-form-field>
-        
+            <mat-label>Select Author</mat-label>
+            <mat-select formControlName="postUser">
+              <mat-option *ngFor="let value of authors" [value]="value">
+                {{ value.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
         <mat-form-field>
-            <mat-label>Enter Category Name</mat-label>
-            <input matInput placeholder="Enter description" formControlName="category" required>
-            <mat-error>{{ getErrorMessage('short_description') }}</mat-error> 
-        </mat-form-field>
+            <mat-label>Select Category</mat-label>
+            <mat-select formControlName="category">
+                <mat-option *ngFor="let value of category" [value]="value">
+                   <img src={{value.image}}  alt="Category">    {{value.title}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>   
 
         <mat-form-field>
             <mat-label>Enter Title</mat-label>

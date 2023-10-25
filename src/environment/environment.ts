@@ -7,10 +7,10 @@ export const environment = {
         edit:host + 'category',
     },
     usersInfo:{
-        get:host + 'usersInfo',
-        delete:host + 'usersInfo',
-        post:host + 'usersInfo',
-        edit:host + 'usersInfo',
+        get:host + 'author',
+        delete:host + 'author',
+        post:host + 'author',
+        edit:host + 'author',
     },
     posts:{
         get:host + 'posts',

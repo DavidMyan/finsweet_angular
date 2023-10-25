@@ -1,16 +1,16 @@
 {
   "category": [
     {
-      "title": "Businessd",
+      "title": "Business",
       "image": "assets/img/category/icon_1.png",
       "short_description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
       "id": 1
     },
     {
-      "id": 2,
-      "image": "assets/img/category/icon_2.png",
       "title": "Startup",
-      "short_description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+      "image": "assets/img/category/icon_2.png",
+      "short_description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "id": 2
     },
     {
       "id": 3,
@@ -126,18 +126,17 @@
       "postUserImg": "assets/img/authors_imgs/author_logo_8.png"
     },
     {
-      "id": 10,
-      "image": "assets/img/post_imgs/post_img_17.jpg",
+      "image": "assets/img/post_imgs/post_img_7.jpg",
+      "postUser": "Dianne Russell",
+      "postUserImg": "assets/img/authors_imgs/author_logo_2.png",
       "category": "Economy",
       "categoryImg": "assets/img/category/icon_3.png",
-      "title": "The complete guide to follow",
-      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-      "postUser": "Jacob Jones",
-      "postData": "May 23, 2022",
-      "postUserImg": "assets/img/authors_imgs/author_logo_8.png"
+      "title": "Test $$ddd",
+      "short_description": "This is a Test psot $",
+      "id": 12
     }
   ],
-  "usersInfo": [
+  "author": [
     {
       "id": 1,
       "image": "assets/img/authors_imgs/author_logo_1.png",
