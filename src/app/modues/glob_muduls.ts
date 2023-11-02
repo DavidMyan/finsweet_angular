@@ -31,5 +31,15 @@ export interface Login{
     email:string | null,
     password:string | null,
     accessToken: string;
-
+}
+export interface Message{
+    id:number
+    fullname:string,
+    email:string,
+    related:string,
+    message:string,
+}
+export interface Register{
+    email:string,
+    password:string,
 }

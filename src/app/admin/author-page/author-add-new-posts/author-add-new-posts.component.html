@@ -1,0 +1,29 @@
+<!-- <form class="example-form" [formGroup]="forum" (ngSubmit)="addNewPost()">
+    <mat-form-field>
+        <mat-label>Enter Image</mat-label>
+        <input matInput placeholder="Enter image URL" formControlName="image" required>
+        <mat-error>{{ getErrorMessage('image') }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Select Category</mat-label>
+        <mat-select formControlName="category">
+            <mat-option *ngFor="let value of category" [value]="value">
+               <img src={{value.image}}  alt="Category">    {{value.title}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>   
+
+    <mat-form-field>
+        <mat-label>Enter Title</mat-label>
+        <input matInput placeholder="Enter description" formControlName="title" required>
+        <mat-error>{{ getErrorMessage('short_description') }}</mat-error> 
+    </mat-form-field>
+    <mat-form-field>
+
+        <mat-label>Enter Description</mat-label>
+        <input matInput placeholder="Enter description" formControlName="short_description" required>
+        <mat-error>{{ getErrorMessage('short_description') }}</mat-error> 
+    </mat-form-field>
+    <button type="submit" [disabled]="!forum.valid">Send</button>
+</form> -->

@@ -61,22 +61,30 @@
             <div class="contact__section_3-box-form">
                 <form method="get" [formGroup]="nameControl" (ngSubmit)="save()" class="contact__section_3-form">
                   <div class="input_box">
-                    <input formControlName="fullname" type="text" class="contact__section_3-box-form-full-name">
+                    <input formControlName="fullname" type="text" class="contact__section_3-box-form-full-name" placeholder="Full Name">
                     <div *ngIf="nameControl.get('fullname')?.touched && nameControl.get('fullname')?.errors" class="valid_text valid_block">
                       This is a required field. There must be at least 3 characters here.
                     </div>
                   </div>
                   <div class="input_box">
-                    <input formControlName="email" type="email" class="contact__section_3-box-form-full-name">
+                    <input formControlName="email" type="email" class="contact__section_3-box-form-full-name" placeholder="Your Email">
                     <div *ngIf="nameControl.get('email')?.touched && nameControl.get('email')?.errors" class="valid_text">
                       This is a required field. There must be at least 3 characters here.
                     </div>
                   </div>
-                    <select name="Query Related" class="contact__section_3-box-form-full-name">
-                        <option value="">Query Related</option>
+                    <select name="Query Related" class="contact__section_3-box-form-full-name" formControlName="related">
+                        <option selected value="Query">Query Related</option>
+                        <option value="Query">Query Related</option>
+                        <option value="Query">Query Related</option>
+                        <option value="Query">Query Related</option>
                     </select>
-                    <textarea rows="3" class="contact__section_3-box-form-full-name" placeholder="Message"></textarea>
-                    <button [disabled]="nameControl.invalid" class="contact__section_3-box-form-button" type="submit">Send Message</button>
+                    <textarea rows="3" class="contact__section_3-box-form-full-name" placeholder="Message" formControlName="message">
+
+                    </textarea>
+                    <div *ngIf="nameControl.get('message')?.touched && nameControl.get('message')?.errors" class="valid_text">
+                        This is a required field. There must be at least 3 characters here.
+                      </div>
+                    <button class="contact__section_3-box-form-button" type="submit">Send Message</button>
                 </form>
             </div>
         </div>

@@ -1,0 +1,29 @@
+.post-category{
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    justify-content: center;
+  }
+  .info-box{
+    display: flex;
+    align-items: center;
+  }
+  .author_post{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 30px;
+    margin: 30px 0 0 0;
+    padding: 30px;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid black;
+  }
+  .author_post-image{
+    width: 300px;
+  }
+  .author_post-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+  }

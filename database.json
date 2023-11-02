@@ -27,15 +27,14 @@
   ],
   "posts": [
     {
-      "id": 1,
       "image": "assets/img/post_imgs/post_img_4.jpg",
-      "category": "Startup",
-      "categoryImg": "assets/img/category/icon_2.png",
+      "postUser": "Floyd Miles",
+      "category": "Business",
+      "categoryImg": "assets/img/category/icon_1.png",
       "title": "Design tips for designers that cover everything you need",
       "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-      "postUser": "Floyd Miles",
-      "postData": "May 23, 2022",
-      "postUserImg": "assets/img/authors_imgs/author_logo_1.png"
+      "postData": "November 2, 2023",
+      "id": 1
     },
     {
       "id": 2,
@@ -60,15 +59,15 @@
       "postUserImg": "assets/img/authors_imgs/author_logo_2.png"
     },
     {
-      "id": 4,
       "image": "assets/img/post_imgs/post_img_8.jpg",
-      "category": "BUSINESS",
+      "postUser": "Floyd Miles",
+      "postUserImg": "assets/img/authors_imgs/author_logo_1.png",
+      "category": "Business",
       "categoryImg": "assets/img/category/icon_1.png",
-      "title": "How to build rapport with your web design clients",
+      "title": "How to buiddld rapport with your web design clients",
       "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-      "postUser": "Jenny Wilson",
-      "postData": "May 23, 2022",
-      "postUserImg": "assets/img/authors_imgs/author_logo_3.png"
+      "postData": "November 2, 2023",
+      "id": 4
     },
     {
       "id": 5,
@@ -126,14 +125,15 @@
       "postUserImg": "assets/img/authors_imgs/author_logo_8.png"
     },
     {
-      "image": "assets/img/post_imgs/post_img_7.jpg",
-      "postUser": "Dianne Russell",
-      "postUserImg": "assets/img/authors_imgs/author_logo_2.png",
-      "category": "Economy",
-      "categoryImg": "assets/img/category/icon_3.png",
-      "title": "Test $$ddd",
-      "short_description": "This is a Test psot $",
-      "id": 12
+      "id": 10,
+      "image": "assets/img/post_imgs/post_img_18.jpg",
+      "category": "Startup",
+      "categoryImg": "assets/img/category/icon_2.png",
+      "title": "Step-by-step guide to choosing great font pairs",
+      "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "postUser": "James West",
+      "postData": "May 23, 2022",
+      "postUserImg": "assets/img/authors_imgs/author_logo_11.png"
     }
   ],
   "author": [
@@ -226,11 +226,64 @@
       "in": "assets/img/footer/in.png"
     }
   ],
+  "messages": [],
+  "registrationRequest": [
+    {
+      "email": "jenny@mail.ru",
+      "password": "jenny",
+      "f_name": "Jenny",
+      "l_name": "Wilson",
+      "image": "assets/img/authors_imgs/author_logo_3.png",
+      "short_description": "Content Writer @Company",
+      "description": "Hi i wont to bi author )))",
+      "id": 2
+    }
+  ],
   "users": [
     {
-      "email": "floyd@mail.ru",
+      "email": "davit@mail.ru",
       "password": "$2a$10$9cTqCRvDPQ9vv1.2EU.Nx.KbtwyzSi.L8l6C7L73c7kbbIq7XJ1jm",
+      "role": "admin",
       "id": 1
+    },
+    {
+      "email": "floyd@mail.ru",
+      "password": "$2a$10$IVxc0I4bMBaiTVJaZsmvu.l3ahoNopIrmU8NmQpIKFt7gBlHoIA7a",
+      "name": "Floyd Miles",
+      "image": "assets/img/authors_imgs/author_logo_1.png",
+      "short_description": "Content Writer @Company",
+      "role": "author",
+      "facebook": "assets/img/footer/facebook.png",
+      "twiter": "assets/img/footer/twiter.png",
+      "instagram": "assets/img/footer/instagram.png",
+      "in": "assets/img/footer/in.png",
+      "id": 2
+    },
+    {
+      "email": "dianne@mail.ru",
+      "password": "$2a$10$Fp3LxM0IZW5o3q7mK8kG3uOkQq/tg14Krrv0lKFjgGN4LuDolliUS",
+      "name": "Dianne Russell",
+      "image": "assets/img/authors_imgs/author_logo_2.png",
+      "short_description": "Content Writer @Company",
+      "role": "author",
+      "facebook": "assets/img/footer/facebook.png",
+      "twiter": "assets/img/footer/twiter.png",
+      "instagram": "assets/img/footer/instagram.png",
+      "in": "assets/img/footer/in.png",
+      "id": 3
+    },
+    {
+      "email": "jenny@mail.ru",
+      "password": "$2a$10$pHtY9dgr8YHeKKJYn7YO4Ow.xU41MtHbZDCsub43KIFwcrL2gAYVC",
+      "name": "Jenny Wilson",
+      "image": "assets/img/authors_imgs/author_logo_3.png",
+      "short_description": "Content Writer @Company",
+      "role": "author",
+      "facebook": "assets/img/footer/facebook.png",
+      "twiter": "assets/img/footer/twiter.png",
+      "instagram": "assets/img/footer/instagram.png",
+      "in": "assets/img/footer/in.png",
+      "id": 4
     }
   ]
 }

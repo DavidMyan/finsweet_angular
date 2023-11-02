@@ -1,0 +1,52 @@
+<mat-accordion *ngFor="let value of messages">
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            User Name: {{value.fullname}}
+        </mat-panel-title>
+        <mat-panel-description>
+          <h3>Comment</h3>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <ul class="reg_message-box">
+        <li > Email:{{value.email}}</li>
+        <li>Message:{{value.message}}</li>
+      </ul>
+      
+      <div class="icon-box">
+        <mat-icon class="mat-18" (click)="deleteMessage(value.id)">delete_forever</mat-icon>
+        <a href ="mailto:{{value.email}}">
+          <mat-icon class="mat-18">outgoing_mail</mat-icon>
+        </a>
+      </div>
+    </mat-expansion-panel>
+</mat-accordion>
+<mat-accordion *ngFor="let data of regMessages">
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+         <div> User Name: {{data.fullname}}</div>
+      </mat-panel-title>
+      <mat-panel-description>
+        <h3>Registration Request</h3>
+        
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <ul class="reg_message-box">
+      <li>Email:{{data.email}}</li>
+      <li>Image:{{data.image}}</li>
+      <li>Name:{{data.f_name}}</li>
+      <li>Last Name:{{data.l_name}}</li>
+      <li>Speciality:{{data.short_description}}</li>
+      <li>Message:{{data.description}}</li>
+    </ul>
+    <div class="icon-box">
+      <mat-icon class="mat-18" (click)="deleteRegMessages(data.id)">delete_forever</mat-icon>
+      <a href ="mailto:{{data.email}}">
+        <mat-icon class="mat-18">outgoing_mail</mat-icon>
+      </a>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

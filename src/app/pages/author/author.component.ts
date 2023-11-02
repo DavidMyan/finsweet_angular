@@ -40,7 +40,6 @@ export class AuthorComponent implements OnInit {
   getSingleAutorPosts() {
     this.http.getItem<AllPosts[]>(`${environment.posts.get}?postUser=${this.authorName}`).subscribe(data => {
         this.posts = data;
-        console.log(data);
         console.log(`${environment.posts.get}?postUser=${this.authorName}`);
     });
   }

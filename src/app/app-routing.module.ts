@@ -1,8 +1,12 @@
+import { AuthorPostsComponent } from './admin/author-page/author-posts/author-posts.component';
+import { AuthorPageComponent } from './admin/author-page/author-page.component';
+import { RegistrationComponent } from './admin/registration/registration.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { loginGuard } from './guards/login.guard';
 import { adminGuard } from './guards/admin.guard';
+import { authorGuard } from './guards/author.guard';
 
 const routes: Routes = [
   {
@@ -61,7 +65,36 @@ const routes: Routes = [
       path:'admin/login',
       loadComponent: () => import  ('./admin/login/login.component').then(m => m.LoginComponent),
       title: 'Login',
-      canActivate:[loginGuard]
+      canActivate:[loginGuard],
+   
+    },
+    {
+      path:'author-page',
+      loadComponent: () => import  ('./admin/author-page/author-page.component').then(m => m.AuthorPageComponent),
+      title: 'Author Page',
+      canActivateChild:[authorGuard],
+      children:[
+        {
+          path:'',
+          redirectTo: 'author-posts',
+          pathMatch: 'full'
+        },
+        {
+         path:'author-posts',
+         loadComponent: () => import  ('./admin/author-page/author-posts/author-posts.component').then(m => m.AuthorPostsComponent),
+         title: 'Author Posts'
+        },
+        {
+          path:'author-new-post',
+          loadComponent: () => import  ('./admin/author-page/author-add-new-posts/author-add-new-posts.component').then(m => m.AuthorAddNewPostsComponent),
+          title: 'Author New Post'
+         },
+      ]
+    },
+    {
+      path:'admin/registration',
+      loadComponent: () => import  ('./admin/registration/registration.component').then(m => m.RegistrationComponent),
+      title: 'Registration',
     },
     {
       path:'admin',
@@ -69,6 +102,11 @@ const routes: Routes = [
       title: 'Admin',
       canActivateChild:[adminGuard],
       children:[
+          {
+            path:'',
+            redirectTo: 'dashpord',
+            pathMatch: 'full'
+          },
          {
           path:'dashpord',
           loadComponent: () => import  ('./admin/admin/adminpages/dashboardadmin/dashboardadmin.component').then(m => m.DashboardadminComponent),
@@ -88,6 +126,16 @@ const routes: Routes = [
           path:'admin-post',
           loadComponent: () => import  ('./admin/admin/adminpages/admin-posts/admin-posts.component').then(m => m.AdminPostsComponent),
           title: 'Admin Posts'
+         },
+         {
+          path:'admin-message',
+          loadComponent: () => import  ('./admin/admin/adminpages/messages/messages.component').then(m => m.MessagesComponent),
+          title: 'Admin Message'
+         },
+         {
+          path:'admin-register',
+          loadComponent: () => import  ('./admin/admin/adminpages/admin-register/admin-register.component').then(m => m.AdminRegisterComponent),
+          title: 'Admin Register'
          }
       ]
     },                                    

@@ -1,22 +1,23 @@
-<div class="header_overlay">
-    <div class="container">
-        <div class="header_overlay_box">
-            <p class="header_overlay_box_text_elm_1">
-                POSTED ON <span>STARTUP</span>
+<div class="header-overlay" [ngStyle]="{'background-image': 'url(' + url + ')'}" *ngIf="headerPost">
+    <div class="container"> 
+        <div class="header-overlay__box" >
+            <p class="header-overlay__box-text-elm-1">
+                POSTED ON <a [routerLink]="['/categories',headerPost.category.toLowerCase()]">{{headerPost.category.toUpperCase()}}</a>
             </p>
-            <h1 class="header_overlay_box_text_title">
-                Step-by-step guide to choosing great font pairs
+            <h1 class="header-overlay__box-text-title">
+                <a [routerLink]="['blog-post',headerPost.id]"></a>{{headerPost.title}}
             </h1>
-            <p class="header_overlay_box_text_elm_2">
-                By <span>James West</span>  |  May 23, 2022 
+            <p class="header-overlay__box-text-elm-2">
+                By 
+                <a [routerLink]="['/authors',headerPost.postUser]">
+                    {{headerPost.postUser}}
+                </a>  |  {{headerPost.postData}}
             </p>
-            <p class="header_overlay_box_text_elm_3">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse 
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-                cupidatat non proident.
+            <p class="header-overlay__box-text-elm-3">
+                {{headerPost.short_description}}
             </p>
-            <div class="header_overlay_box_text_elm_btn">
-                <a routerLink="blog-post" class="header_overlay_box_text_elm_btn_link">Read More></a>
+            <div class="header-overlay__box-text-elm-btn">
+                <a routerLink="blog-post" class="header-overlay__box-text-elm-btn-link">Read More></a>
             </div>
         </div>
     </div>

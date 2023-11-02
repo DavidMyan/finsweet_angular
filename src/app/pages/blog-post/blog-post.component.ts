@@ -5,7 +5,6 @@ import { NgForOf, NgIf } from '@angular/common';
 import { HttpService } from 'src/app/service/http.service';
 import { environment } from 'src/environment/environment';
 import { ActivatedRoute, RouterLinkActive, RouterModule } from '@angular/router';
-
 @Component({
   standalone:true,
   imports:[JoinComponent,NgForOf,NgIf,RouterLinkActive,RouterModule],

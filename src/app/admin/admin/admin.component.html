@@ -32,7 +32,24 @@
                 <mat-icon class="material-symbols-outlined button_icon">share</mat-icon>
                 Posts
             </button>
-        </div>  
+        </div> 
+        <div class="menu_buttons">
+            <button mat-raised-button color="primary"
+                    class="global_button"
+                    routerLink="admin-message"
+                    matBadge={{messageCount}}
+                    matBadgePosition="before"
+                    matBadgeColor="accent">
+                <mat-icon class="material-symbols-outlined button_icon">messages</mat-icon>
+                Messages
+            </button>
+        </div>
+        <div class="menu_buttons">
+            <button mat-raised-button color="primary" class="global_button" routerLink="admin-register">
+                <mat-icon class="material-symbols-outlined button_icon">how_to_reg</mat-icon>
+                Reg New User
+            </button>
+        </div> 
     </mat-drawer>
     <mat-drawer-content>
         <router-outlet> </router-outlet>

@@ -1,0 +1,47 @@
+<div *ngIf="isDelete">
+    <h1 mat-dialog-title>
+        Delete Item?
+    </h1>
+    <div mat-dialog-content>
+        Would you like to delete this Item?
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button mat-dialog-close (click)="onNoClick()">No</button>
+        <button mat-button mat-dialog-close cdkFocusInitial (click)="onYesClick()">Ok</button>
+    </div>
+</div>
+<div>
+      <form class="example-form" *ngIf="action" [formGroup]="forum" (ngSubmit)="send()">
+        <mat-form-field>
+            <mat-label>Enter Image</mat-label>
+            <input matInput placeholder="Enter image URL" formControlName="image" required>
+            <mat-error>{{ getErrorMessage('image') }}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Select Category</mat-label>
+            <mat-select formControlName="category">
+                <mat-option *ngFor="let value of category" [value]="value">
+                   <img src={{value.image}}  alt="Category">    {{value.title}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>   
+
+        <mat-form-field>
+            <mat-label>Enter Title</mat-label>
+            <input matInput placeholder="Enter description" formControlName="title" required>
+            <mat-error>{{ getErrorMessage('short_description') }}</mat-error> 
+        </mat-form-field>
+        <mat-form-field>
+
+            <mat-label>Enter Description</mat-label>
+            <input matInput placeholder="Enter description" formControlName="short_description" required>
+            <mat-error>{{ getErrorMessage('short_description') }}</mat-error> 
+        </mat-form-field>
+        <button type="submit" [disabled]="!forum.valid">Send</button>
+    </form>
+</div>
+
+
+
+

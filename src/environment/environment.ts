@@ -21,4 +21,16 @@ export const environment = {
     loginReg:{
         get:host + 'login',
     },
+    register:{
+        get:host + 'register',
+    },
+    comments:{
+        get:host + 'messages',
+    },
+    regRequest:{
+        get:host + 'registrationRequest',
+    },
+    author:{
+        get:host + 'users',
+    },
 }

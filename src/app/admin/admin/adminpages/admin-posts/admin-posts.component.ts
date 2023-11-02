@@ -16,7 +16,7 @@ import { DialogForPostsComponent } from './dialog-for-posts/dialog-for-posts.com
 })
 export class AdminPostsComponent implements OnInit {
   postTableItem: AllPosts[] = [];
-  displayedColumns: string[] = ['id', 'Image', 'postusername', 'categoryname', 'title', 'description', 'Action'];
+  displayedColumns: string[] = ['id', 'Image', 'postusername', 'categoryname', 'title', 'description','date', 'Action'];
   isDelete:boolean = false
   isAdd:boolean = false
   constructor(private http:HttpService,public dialog: MatDialog){}

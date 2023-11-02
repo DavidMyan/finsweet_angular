@@ -1,0 +1,9 @@
+<div class="dialog_box">
+    <div mat-dialog-content>
+        Do you want to submit a registration request?
+    </div>
+    <div mat-dialog-actions>
+      <button mat-button mat-dialog-close (click)="dontSendMesage()">No</button>
+      <button mat-button mat-dialog-close cdkFocusInitial (click)="sendMesage()">Yes</button>
+    </div>
+</div>

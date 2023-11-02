@@ -7,15 +7,15 @@ import { AppComponent } from './app.component';
 import { PagesNotFoundComponent } from './pages/pages-not-found/pages-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
     declarations: [
         AppComponent,
         PagesNotFoundComponent,
     ],
-    providers: [],
+    providers: [
+        
+    ],
     bootstrap: [AppComponent],
     imports: [
         MatDialogModule,
@@ -23,8 +23,6 @@ import { MatInputModule } from '@angular/material/input';
         AppRoutingModule,
         HttpClientModule,
         BrowserAnimationsModule,
-        MatFormFieldModule,
-        MatInputModule,
     ]
 })
 export class AppModule { }

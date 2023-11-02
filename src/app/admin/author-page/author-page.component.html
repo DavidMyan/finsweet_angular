@@ -1,0 +1,38 @@
+<div *ngIf="author">
+    <div>
+        <mat-toolbar>
+          <span>My Application</span>
+          <div class="info-box">
+            <img src={{author.image}} alt="" class="author-image">
+            <button mat-button [matMenuTriggerFor]="menu" >
+                {{author.name}}
+            </button>
+          </div>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <button (click)="remuveToken()" mat-raised-button color="primary" class="logOut_button">
+                        <mat-icon class="material-symbols-outlined button_icon">logout</mat-icon>
+                        LogOut
+                    </button>
+                </button>
+            </mat-menu>
+        </mat-toolbar>
+    </div>
+    <mat-drawer-container class="example-container">
+        <mat-drawer mode="side" opened  class="mat_drawer">
+            <div class="menu_buttons">
+                <button mat-raised-button color="primary" class="global_button" routerLink="author-posts">
+                    My Posts
+                </button>
+            </div>
+            <div class="menu_buttons">
+                <button mat-raised-button color="primary" class="global_button" routerLink="author-new-post">
+                    Add New Posts  
+                </button>
+            </div>
+        </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+      </mat-drawer-container>
+</div>

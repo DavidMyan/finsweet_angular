@@ -1,0 +1,24 @@
+<h2>My Psts</h2>
+    <div *ngFor="let value of authorPosts" >
+    <div class="author_post">
+        <div>
+            <img src={{value.image}} alt="" class="author_post-image">
+        </div>
+        <h3>
+            {{value.title}}
+        </h3>
+        <div class="post-category">
+            <img src={{value.categoryImg}} alt="categoryImg">{{value.category}}
+        </div>
+        <div>
+            {{value.short_description}}
+        </div>
+        <div>
+            {{value.postData}}
+        </div>
+        <div class="author_post-buttons">
+            <button (click)="openEditDialog(value, value.id)">Edit</button>
+            <button (click)="openDeleteDialog(value.id)">Delete</button>
+        </div>
+    </div>
+</div>

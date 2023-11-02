@@ -32,7 +32,7 @@ export class DialogForPostsComponent implements OnInit {
   titleValue!: string;
   categoryValue!: string;
   shortDescriptionValue!: string;
-  selectedValue: UsersCard | undefined;
+  selectedValue!: UsersCard ;
 
 
   category: CategoryCard[] = [];
@@ -70,14 +70,6 @@ export class DialogForPostsComponent implements OnInit {
       short_description: new FormControl(this.shortDescriptionValue, [Validators.required]),
     });
 
-    if (this.data.postId) {
-      this.http.getItem<AllPosts>(`${environment.posts.get}/${this.data.postId}`).subscribe(postData => {
-          this.imageValue = postData.image || '';
-          this.titleValue = postData.title || '';
-          this.shortDescriptionValue = postData.short_description || '';
-      });
-    }
-
     this.getCategory();
     this.getAuthor();
     
@@ -93,6 +85,15 @@ export class DialogForPostsComponent implements OnInit {
   send() {
     const selectedUser: UsersCard = this.forum.get('postUser')?.value;
     const selectedCategoryr: CategoryCard = this.forum.get('category')?.value;
+    
+    const months = [
+      'January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+    
+    const postDate = new Date();
+    const formattedDate = `${months[postDate.getMonth()]} ${postDate.getDate()}, ${postDate.getFullYear()}`;
+    
     const postData = {
       image: this.forum.get('image')?.value,
       postUser: selectedUser.name,
@@ -100,14 +101,17 @@ export class DialogForPostsComponent implements OnInit {
       category: selectedCategoryr.title,
       categoryImg: selectedCategoryr.image,
       title: this.forum.get('title')?.value,
-      short_description: this.forum.get('short_description')?.value
+      short_description: this.forum.get('short_description')?.value,
+      postData: formattedDate
     };
+    console.log(postDate);
+    
     this.dialogRef.close({
       data: postData,
       action: this.action
     });
   }
-
+  
   getCategory() {
     this.http.getItem<CategoryCard[]>(`${environment.category.get}`).subscribe(data => {
       this.category = data;
