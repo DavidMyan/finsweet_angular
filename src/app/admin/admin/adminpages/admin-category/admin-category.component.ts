@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogForCategoryComponent } from './dialog-for-category/dialog-for-category.component';
+import { DilaogForActionComponent } from 'src/app/dialogs/dilaog-for-action/dilaog-for-action.component';
 
 @Component({
   standalone: true,
@@ -24,9 +25,7 @@ constructor(private http:HttpService,public dialog: MatDialog){}
 
 openDeleteDialog(deletId: number): void {
   this.isDelete = true;
-  this.isAdd = false;
-  const dialogRef = this.dialog.open(DialogForCategoryComponent, {
-    width: '250px',
+  const dialogRef = this.dialog.open(DilaogForActionComponent, {
     data: { 
       isDelete: this.isDelete,
       isAdd: this.isAdd,
@@ -45,7 +44,6 @@ openEditDialog(category: CategoryCard,categoryId:number): void {
   this.isDelete = false;
   this.isAdd = false;
   const dialogRef = this.dialog.open(DialogForCategoryComponent, {
-    width: '250px',
     data: {
       isDelete: this.isDelete,
       isAdd: this.isAdd,
@@ -80,7 +78,6 @@ openAddDialog(): void {
   this.isDelete = false;
   this.isAdd = true;
   const dialogRef = this.dialog.open(DialogForCategoryComponent, {
-    width: '250px',
     data: { 
       isDelete: this.isDelete,
       isAdd: this.isAdd,

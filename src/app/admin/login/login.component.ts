@@ -33,18 +33,16 @@ export class LoginComponent{
 
   emailFormControl = new FormControl('');
   password = new FormControl('');
-  user!:any[]
+  user:any = []
   logReg!: Login;
-  constructor(private http: HttpService, private router: Router) { }
+  errorMessage: string = '';
+  constructor(private http: HttpService, private router: Router) {}
 
   onEmailInput() {
     const email = this.emailFormControl.value;
 
-    this.http.getItem<any[]>(`http://localhost:3000/users?email=${email}`).subscribe((data) => {
+    this.http.getItem<string[]>(`http://localhost:3000/users?email=${email}`).subscribe(data => {
       this.user = data;
-      localStorage.setItem('role', this.user[0].role);
-      console.log(this.user[0].role);
-      
     });
   }
 
@@ -59,16 +57,15 @@ export class LoginComponent{
 
       localStorage.setItem('token', JSON.stringify(data.accessToken));
       localStorage.setItem('email', this.user[0].email);
+      localStorage.setItem('role', this.user[0].role);
 
-      if (this.user[0].role === 'admin') {
-        console.log(this.user[0].role);
-        
+      if (this.user[0].role == 'admin' || this.user[0].role == 'author') {
         this.router.navigate(['/admin']);
-      } else if (this.user[0].role === 'author') {
-        this.router.navigate(['/author-page']);
       } else {
         this.router.navigate(['/admin/login']);
       }
+  },() => {
+    this.errorMessage = 'Invalid login credentials. Please try again.'
   });
   }
 

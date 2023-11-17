@@ -6,10 +6,19 @@ import { AllPosts } from 'src/app/modues/glob_muduls';
 import { HttpService } from 'src/app/service/http.service';
 import { environment } from 'src/environment/environment';
 import { DialogForPostsComponent } from './dialog-for-posts/dialog-for-posts.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import {MatButtonModule} from '@angular/material/button';
+import { DialogForUsersComponent } from '../admin-users/dialog-for-users/dialog-for-users.component';
+import { DilaogForActionComponent } from 'src/app/dialogs/dilaog-for-action/dilaog-for-action.component';
 
 @Component({
   standalone: true,
-  imports: [MatIconModule, MatTableModule],
+  imports: [
+    MatIconModule,
+    MatTableModule,
+    MatButtonModule,
+    MatTooltipModule,
+  ],
   selector: 'app-admin-posts',
   templateUrl: './admin-posts.component.html',
   styleUrls: ['./admin-posts.component.css']
@@ -21,32 +30,15 @@ export class AdminPostsComponent implements OnInit {
   isAdd:boolean = false
   constructor(private http:HttpService,public dialog: MatDialog){}
 
-  openDeleteDialog(deletId: number): void {
-    this.isDelete = true;
-    this.isAdd = false;
-    const dialogRef = this.dialog.open(DialogForPostsComponent, {
-      width: '250px',
-      data: { 
-        isDelete: this.isDelete,
-        isAdd: this.isAdd,
-      }
-    });
-  
-    dialogRef.afterClosed().subscribe(result => {
-      this.isDelete = false;
-      if (result) {
-        this.deletePost(deletId);
-      }
-    });
+  ngOnInit(): void {
+    this.getPost();
   }
-  
+
   openEditDialog(post: AllPosts,postId: number): void {
     this.isDelete = false;
     this.isAdd = false;
     const dialogRef = this.dialog.open(DialogForPostsComponent, {
-      width: '250px',
       data: {
-        isDelete: this.isDelete,
         isAdd: this.isAdd,
         action: 'edit',
         postId: postId, 
@@ -67,10 +59,8 @@ export class AdminPostsComponent implements OnInit {
   }
   
   openAddDialog(): void {
-    this.isDelete = false;
     this.isAdd = true;
     const dialogRef = this.dialog.open(DialogForPostsComponent, {
-      width: '250px',
       data: { 
         isDelete: this.isDelete,
         isAdd: this.isAdd,
@@ -89,10 +79,28 @@ export class AdminPostsComponent implements OnInit {
       }
     });
   }
+  openImageDialog(imageUrl: string): void {
+    this.dialog.open(DilaogForActionComponent, {
+     data: {
+       fullImageUrl: imageUrl 
+     }
+   });
+ }
+ openDeleteDialog(deletId: number): void {
+    this.isDelete = true;
+    const dialogRef = this.dialog.open(DilaogForActionComponent, {
+      data: { 
+        isDelete: this.isDelete,
+      }
+  });
 
-  ngOnInit(): void {
-    this.getPost();
-  }
+  dialogRef.afterClosed().subscribe(result => {
+    this.isDelete = false;
+    if (result) {
+      this.deletePost(deletId);
+    }
+  });
+}
 
   getPost() {
     this.http.getItem<AllPosts[]>(`${environment.posts.get}`).subscribe(data => {

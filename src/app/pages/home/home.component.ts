@@ -28,13 +28,6 @@ import { environment } from 'src/environment/environment';
 
 export class HomeComponent implements OnInit {
   headerPosts: AllPosts[] = [];
-  splideOptions = {
-    type       : 'fade',
-    pagination : false,
-    arrows     : false,
-    autoplay   : true,
-    interval   : 4000 
-  };
   category: CategoryCard[] = [];
   usersInfo: UsersCard[] = [];
   posts: AllPosts[] = [];

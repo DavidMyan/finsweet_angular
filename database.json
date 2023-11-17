@@ -29,11 +29,11 @@
     {
       "image": "assets/img/post_imgs/post_img_4.jpg",
       "postUser": "Floyd Miles",
-      "category": "Business",
-      "categoryImg": "assets/img/category/icon_1.png",
+      "category": "Startup",
+      "categoryImg": "assets/img/category/icon_2.png",
       "title": "Design tips for designers that cover everything you need",
       "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-      "postData": "November 2, 2023",
+      "postData": "November 9, 2023",
       "id": 1
     },
     {
@@ -48,25 +48,24 @@
       "postUserImg": "assets/img/authors_imgs/author_logo_2.png"
     },
     {
-      "id": 3,
       "image": "assets/img/post_imgs/post_img_3.jpg",
-      "category": "BUSINESS",
+      "postUser": "Dianne Russell",
+      "postUserImg": "assets/img/authors_imgs/author_logo_2.png",
+      "category": "Business",
       "categoryImg": "assets/img/category/icon_1.png",
       "title": "Design tips for designers that cover everything you need",
       "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-      "postUser": "Dianne Russell",
-      "postData": "May 23, 2022",
-      "postUserImg": "assets/img/authors_imgs/author_logo_2.png"
+      "postData": "November 4, 2023",
+      "id": 3
     },
     {
       "image": "assets/img/post_imgs/post_img_8.jpg",
       "postUser": "Floyd Miles",
-      "postUserImg": "assets/img/authors_imgs/author_logo_1.png",
-      "category": "Business",
-      "categoryImg": "assets/img/category/icon_1.png",
+      "category": "Startup",
+      "categoryImg": "assets/img/category/icon_2.png",
       "title": "How to buiddld rapport with your web design clients",
       "short_description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-      "postData": "November 2, 2023",
+      "postData": "November 11, 2023",
       "id": 4
     },
     {
@@ -142,6 +141,7 @@
       "image": "assets/img/authors_imgs/author_logo_1.png",
       "fullImage": "assets/img/authors_imgs/author_1.png",
       "name": "Floyd Miles",
+      "email": "floyd@mail.ru",
       "short_description": "Content Writer @Company",
       "facebook": "assets/img/footer/facebook.png",
       "twiter": "assets/img/footer/twiter.png",
@@ -153,6 +153,7 @@
       "image": "assets/img/authors_imgs/author_logo_2.png",
       "fullImage": "assets/img/authors_imgs/author_2.png",
       "name": "Dianne Russell",
+      "email": "dianne@mail.ru",
       "short_description": "Content Writer @Company",
       "facebook": "assets/img/footer/facebook.png",
       "twiter": "assets/img/footer/twiter.png",
@@ -164,6 +165,7 @@
       "image": "assets/img/authors_imgs/author_logo_3.png",
       "fullImage": "assets/img/authors_imgs/author_3.png",
       "name": "Jenny Wilson",
+      "email": "jenny@mail.ru",
       "short_description": "Content Writer @Company",
       "facebook": "assets/img/footer/facebook.png",
       "twiter": "assets/img/footer/twiter.png",
@@ -175,6 +177,7 @@
       "image": "assets/img/authors_imgs/author_logo_4.png",
       "fullImage": "assets/img/authors_imgs/author_4.png",
       "name": "Leslie Alexander",
+      "email": "leslie@mail.ru",
       "short_description": "Content Writer @Company",
       "facebook": "assets/img/footer/facebook.png",
       "twiter": "assets/img/footer/twiter.png",
@@ -186,17 +189,7 @@
       "image": "assets/img/authors_imgs/author_logo_5.png",
       "fullImage": "assets/img/authors_imgs/author_5.png",
       "name": "Guy Hawkins",
-      "short_description": "Content Writer @Company",
-      "facebook": "assets/img/footer/facebook.png",
-      "twiter": "assets/img/footer/twiter.png",
-      "instagram": "assets/img/footer/instagram.png",
-      "in": "assets/img/footer/in.png"
-    },
-    {
-      "id": 6,
-      "image": "assets/img/authors_imgs/author_logo_6.png",
-      "fullImage": "assets/img/authors_imgs/author_6.png",
-      "name": "Eleanor Pena",
+      "email": "guy@mail.ru",
       "short_description": "Content Writer @Company",
       "facebook": "assets/img/footer/facebook.png",
       "twiter": "assets/img/footer/twiter.png",
@@ -208,6 +201,7 @@
       "image": "assets/img/authors_imgs/author_logo_7.png",
       "fullImage": "assets/img/authors_imgs/author_7.png",
       "name": "Robert Fox",
+      "email": "robert@mail.ru",
       "short_description": "Content Writer @Company",
       "facebook": "assets/img/footer/facebook.png",
       "twiter": "assets/img/footer/twiter.png",
@@ -219,71 +213,102 @@
       "image": "assets/img/authors_imgs/author_logo_8.png",
       "fullImage": "assets/img/authors_imgs/author_8.png",
       "name": "Jacob Jones",
+      "email": "jacob@mail.ru",
       "short_description": "Content Writer @Company",
       "facebook": "assets/img/footer/facebook.png",
       "twiter": "assets/img/footer/twiter.png",
       "instagram": "assets/img/footer/instagram.png",
       "in": "assets/img/footer/in.png"
+    },
+    {
+      "email": "davit@mail.ru",
+      "name": "David Matevosyan",
+      "noFoto": "assets/img/authors_imgs/defolt_avatar.png",
+      "id": 1
     }
   ],
   "messages": [],
-  "registrationRequest": [
-    {
-      "email": "jenny@mail.ru",
-      "password": "jenny",
-      "f_name": "Jenny",
-      "l_name": "Wilson",
-      "image": "assets/img/authors_imgs/author_logo_3.png",
-      "short_description": "Content Writer @Company",
-      "description": "Hi i wont to bi author )))",
-      "id": 2
-    }
-  ],
+  "registrationRequest": [],
   "users": [
     {
       "email": "davit@mail.ru",
       "password": "$2a$10$9cTqCRvDPQ9vv1.2EU.Nx.KbtwyzSi.L8l6C7L73c7kbbIq7XJ1jm",
+      "name": "David Matevosyan",
+      "noFoto": "assets/img/authors_imgs/defolt_avatar.png",
       "role": "admin",
       "id": 1
     },
     {
       "email": "floyd@mail.ru",
       "password": "$2a$10$IVxc0I4bMBaiTVJaZsmvu.l3ahoNopIrmU8NmQpIKFt7gBlHoIA7a",
-      "name": "Floyd Miles",
-      "image": "assets/img/authors_imgs/author_logo_1.png",
-      "short_description": "Content Writer @Company",
       "role": "author",
-      "facebook": "assets/img/footer/facebook.png",
-      "twiter": "assets/img/footer/twiter.png",
-      "instagram": "assets/img/footer/instagram.png",
-      "in": "assets/img/footer/in.png",
       "id": 2
     },
     {
       "email": "dianne@mail.ru",
       "password": "$2a$10$Fp3LxM0IZW5o3q7mK8kG3uOkQq/tg14Krrv0lKFjgGN4LuDolliUS",
-      "name": "Dianne Russell",
-      "image": "assets/img/authors_imgs/author_logo_2.png",
-      "short_description": "Content Writer @Company",
       "role": "author",
-      "facebook": "assets/img/footer/facebook.png",
-      "twiter": "assets/img/footer/twiter.png",
-      "instagram": "assets/img/footer/instagram.png",
-      "in": "assets/img/footer/in.png",
       "id": 3
     },
     {
       "email": "jenny@mail.ru",
-      "password": "$2a$10$pHtY9dgr8YHeKKJYn7YO4Ow.xU41MtHbZDCsub43KIFwcrL2gAYVC",
-      "name": "Jenny Wilson",
-      "image": "assets/img/authors_imgs/author_logo_3.png",
-      "short_description": "Content Writer @Company",
+      "password": "$2a$10$3dEprA5UCVYCklziVpBZFuk2KkbMyWj6tNnN.Gt5KjJVq1iLxWZuy",
       "role": "author",
-      "facebook": "assets/img/footer/facebook.png",
-      "twiter": "assets/img/footer/twiter.png",
-      "instagram": "assets/img/footer/instagram.png",
-      "in": "assets/img/footer/in.png",
       "id": 4
+    },
+    {
+      "email": "leslie@mail.ru",
+      "password": "$2a$10$ghv76o4RAbTpWcNV3R8VweQlRhK4xVUq/oM2k4KJo09lOSfVkE6RO",
+      "role": "author",
+      "id": 5
+    },
+    {
+      "email": "guy@mail.ru",
+      "password": "$2a$10$/VoDHUGJReKnWIF3Nrg13.4UpclZ3hCPQtbjmv1PiPi/vdZ7NDRfq",
+      "role": "author",
+      "id": 6
+    },
+    {
+      "email": "eleanor@mail.ru",
+      "password": "$2a$10$ff.nuxRu7Jk3nX2byPub9eebwFbHqOEgo8fynr1LbLstVPDceI5Oa",
+      "role": "author",
+      "id": 7
+    },
+    {
+      "email": "robert@mail.ru",
+      "password": "$2a$10$iYpQpFO/BGJbOp4IkTeTnOiFVRcFirBEJ6Mixp03AQhPx8TbpecMm",
+      "role": "author",
+      "id": 8
+    },
+    {
+      "email": "jacob@mail.ru",
+      "password": "$2a$10$tB8qK0kVJxD/4sHPzpSLHOJCtucNdLdjJ/EfK8RixeWU5yh/P4DXO",
+      "role": "author",
+      "id": 9
+    },
+    {
+      "email": "artur@mail.ru",
+      "password": "$2a$10$AUWeNQ.nsio8Jv.joqD9BOCtQ.BUVxDkJ1p8sOvIQGu2pNgrJA6ai",
+      "role": "author",
+      "id": 10
+    },
+    {
+      "email": "ashot@mail.ru",
+      "password": "$2a$10$QGhjkuVVlONg25b5K/bLe.IBzf6H.fNozNym5Q3rRTcxW6KAkPOFG",
+      "role": "author",
+      "id": 11
+    },
+    {
+      "email": "flodyd@mail.rud",
+      "password": "$2a$10$MvQMh5yIt3ge3pbMuyhVn.lQJa3uMKI7uhkXwH1bA.byqLvEJPhKW",
+      "role": "author",
+      "id": 12
+    },
+    {
+      "email": "ashot@mail.rus",
+      "password": "$2a$10$jaf66ezYCL8UajVHuvses.qpdmmBaAgCC/XiciwUT.IFcE55dfzQW",
+      "role": "author",
+      "id": 13
     }
   ]
 }

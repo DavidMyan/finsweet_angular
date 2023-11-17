@@ -11,6 +11,7 @@ import { AllPosts } from 'src/app/modues/glob_muduls';
 import { HttpService } from 'src/app/service/http.service';
 import { environment } from 'src/environment/environment';
 import { DialogForAuthorComponent } from '../dialog-for-author/dialog-for-author.component';
+import { DilaogForActionComponent } from 'src/app/dialogs/dilaog-for-action/dilaog-for-action.component';
 
 @Component({
   standalone:true,
@@ -45,7 +46,7 @@ ngOnInit(): void {
   this.getAuthor()
 }
 getAuthor(){
-  this.http.getItem<any>(`${environment.author.get}?email=${this.email}`).subscribe(date =>{
+  this.http.getItem<any>(`${environment.usersInfo.get}?email=${this.email}`).subscribe(date =>{
     this.author = date[0];
     this.authorName =  this.author.name;
     this.getAuthorPost()
@@ -53,7 +54,8 @@ getAuthor(){
 }
 getAuthorPost(){
   this.http.getItem<AllPosts[]>(`${environment.posts.get}?postUser=${this.authorName}` ).subscribe(date =>{
-    this.authorPosts = date      
+    this.authorPosts = date
+    console.log(this.authorPosts);
   })
 }
 deletePost(deletId: number) {
@@ -72,9 +74,7 @@ remuveToken(){
 
 openDeleteDialog(deletId: number): void {
   this.isDelete = true;
-  this.isAdd = false;
-  const dialogRef = this.dialog.open(DialogForAuthorComponent, {
-    width: '250px',
+  const dialogRef = this.dialog.open(DilaogForActionComponent, {
     data: { 
       isDelete: this.isDelete,
       isAdd: this.isAdd,
@@ -91,7 +91,6 @@ openDeleteDialog(deletId: number): void {
 
 openEditDialog(post: AllPosts,postId: number): void {
   this.isDelete = false;
-  this.isAdd = false;
   const dialogRef = this.dialog.open(DialogForAuthorComponent, {
     width: '250px',
     data: {

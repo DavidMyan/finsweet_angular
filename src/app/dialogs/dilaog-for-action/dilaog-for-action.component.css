@@ -1,0 +1,34 @@
+.full_image{
+    width: 100%;
+    height: 500px;
+}
+.delete_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+}
+.request_dialog{
+    width: 400px;
+    padding: 30px;
+    background: #cd4a0b;
+    text-align: center;
+    position: relative;
+}
+.request_dialog-info{
+    font-size: 20px;
+    color: white;
+}
+.request_dialog-button{
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 0 20px;
+}
+.request_dialog-close{
+    position: absolute;
+    top:2px;
+    right: 2px;
+    cursor: pointer;
+    border-radius: 50%;
+}

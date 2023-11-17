@@ -15,7 +15,9 @@ export class DashboardadminComponent implements OnInit{
   usersCount:number[] = []
   postCount:number[] = []
   categoryCount:number[] = []
+
 constructor(private http: HttpService){}
+
   ngOnInit(): void {
     this.http.getItem<number[]>(`${environment.usersInfo.get}`).subscribe(data =>{
       this.usersCount = data

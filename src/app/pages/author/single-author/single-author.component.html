@@ -1,6 +1,10 @@
 <div class="author__section_1-box" *ngIf="user">
     <div class="author__section_1-box-user">
-        <img src={{user.fullImage}} alt="User_img" class="author__section_1-box-user-img">
+        <img [src]="user.fullImage || user.noFoto"
+             (error)="user.fullImage = user.noFoto"
+             alt="User_img"
+            class="author__section_1-box-user-img"
+            (click)="openImageDialog(user.fullImage || user.noFoto)">
     </div>
     <div class="author__section_1-box-text">
         <h1 class="author__section_1-box-text-title">

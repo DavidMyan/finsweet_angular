@@ -1,17 +1,5 @@
-<div *ngIf="isDelete">
-    <h1 mat-dialog-title>
-        Delete Item?
-    </h1>
-    <div mat-dialog-content>
-        Would you like to delete this Item?
-    </div>
-    <div mat-dialog-actions>
-        <button mat-button mat-dialog-close (click)="onNoClick()">No</button>
-        <button mat-button mat-dialog-close cdkFocusInitial (click)="onYesClick()">Ok</button>
-    </div>
-</div>
-<div>
-    <form class="example-form" *ngIf="action" [formGroup]="form" (ngSubmit)="send()">
+<form class="example-form" *ngIf="action" [formGroup]="form" (ngSubmit)="send()">
+    <div class="form_box">
         <mat-form-field>
             <mat-label>Enter Name</mat-label>
             <input matInput placeholder="Enter Full Name" formControlName="name" required>
@@ -29,9 +17,7 @@
             <input matInput placeholder="Enter Speciality" formControlName="short_description" required>
             <mat-error>{{ getErrorMessage('short_description') }}</mat-error>
         </mat-form-field>
-        <button type="submit" [disabled]="!form.valid">Send</button>
-    </form>
-</div>
-
-
+        <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">Send</button>
+    </div>
+</form>
 

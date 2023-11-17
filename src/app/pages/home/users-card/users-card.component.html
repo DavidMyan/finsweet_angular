@@ -1,6 +1,9 @@
 <div class="section_5_box_1_elm_1_user_box_elm_1" >
     <div class="section_5_box_1_elm_1_user_box_elm_1_img">
-        <img class="section_5_box_1_elm_1_user_box_elm_1_img" src={{userCard.image}} alt="user_img">
+        <img class="section_5_box_1_elm_1_user_box_elm_1_img"
+        [src]="userCard.image ? userCard.image : userCard.noFoto"
+        alt="user_img"
+        (error)="userCard.image = userCard.noFoto">
     </div>
     <h3 class="section_5_box_1_elm_1_user_box_elm_1_name">
         <a [routerLink]="['/authors',userCard.name]">{{userCard.name}}</a>

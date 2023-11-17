@@ -9,6 +9,7 @@
 
 .example-full-width {
   width: 100%;
+  border-radius: 35px 0;
 }
 .forum_bg{
   display: flex;
@@ -29,6 +30,7 @@ section {
   font-size: 14px;
   margin-left: 8px;
   min-width: 120px;
+  
 }
 
 .button-box {
@@ -53,7 +55,7 @@ section {
 }
 .form_box{
   padding: 40px;
-  background: #0088fd;
+  background: #9f2626c2;
   border-radius: 2%;
 }
 .button-text{
@@ -62,4 +64,9 @@ section {
 .reg_link{
   cursor: pointer;
   color: aliceblue;
+}
+.error-message{
+  color: red;
+  text-align: center;
+  margin: 0 0 20px 0;
 }

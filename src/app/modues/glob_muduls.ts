@@ -9,6 +9,7 @@ export interface UsersCard{
     id:number;
     image:string;
     fullImage:string
+    noFoto:string;
     name:string;
     short_description:string;
     facebook:string;
@@ -26,6 +27,7 @@ export interface AllPosts{
     postUser?:string;
     postData?:string;
     postUserImg:string;
+    noFoto:string;
 }
 export interface Login{
     email:string | null,

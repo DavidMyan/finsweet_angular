@@ -1,6 +1,9 @@
     <div class="blog-section__1_box-elm-2-card">
         <div class="blog-section__1_box-elm-2-card-img"[ngClass]="{ 'cotugory_section': isCotugory, 'blog-section__1_box-elm-2-card-img': isBlog }">
-            <img [ngClass]="{ 'cotugory_section-width': isCotugory, 'blog-section__1_box-elm-2-card-img-item': isBlog,'author_page': isAuthor }" src={{allPosts.image}} alt="blog_section_1_img_1" class="blog-section__1_box-elm-2-card-img-item">
+            <img [ngClass]="{ 'cotugory_section-width': isCotugory, 'blog-section__1_box-elm-2-card-img-item': isBlog,'author_page': isAuthor }"
+             [src]="allPosts.image"
+             (error)="allPosts.image = allPosts.noFoto"
+              alt="blog_section_1_img_1" class="blog-section__1_box-elm-2-card-img-item">
         </div>
         <div class="blog-section__1_box-elm-2-card-text">
             <p class="blog-section__1_box-elm-2-card-text-elm-1"[routerLink]="['/categories',allPosts.category.toLowerCase()]">

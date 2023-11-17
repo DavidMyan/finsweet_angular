@@ -39,7 +39,8 @@
     <div class="blog_post-section__2">
         <div class="container">
             <div class="blog_post-section__2-img">
-                <img src={{correctPost.image}} alt="section_2_backgraund" class="blog_post-section__2-img-item">
+                <img [src]="correctPost.image || correctPost.noFoto"
+                (error)="correctPost.image = correctPost.noFoto" alt="section_2_backgraund" class="blog_post-section__2-img-item">
             </div>
         </div>
     </div>

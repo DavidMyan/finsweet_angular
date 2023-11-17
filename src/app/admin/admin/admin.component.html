@@ -1,55 +1,69 @@
-<div>
+<div *ngIf="author">
     <mat-toolbar>
       <span>Finsweet Admin Page</span>
-      <button (click)="remuveToken()" mat-raised-button color="primary" class="logOut_button">
-        <mat-icon class="material-symbols-outlined button_icon">logout</mat-icon>
-        LogOut
-    </button>
+      <div class="info-box">
+            <img [src]="author.image || author.noFoto "
+            (error)="author.image = author.noFoto" class="author-image">
+            <button mat-button [matMenuTriggerFor]="menu" >
+                {{author.name}}
+            </button>
+          </div>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <button (click)="remuveToken()" mat-raised-button color="primary" class="logOut_button">
+                        <mat-icon class="material-symbols-outlined button_icon">logout</mat-icon>
+                        LogOut
+                    </button>
+                </button>
+            </mat-menu>
     </mat-toolbar>
   </div>
-  <mat-drawer-container class="example-container" [style.height]="window.innerHeight - 64 + 'px'">
+  <mat-drawer-container class="example-container" >
     <mat-drawer mode="side" opened class="mat_drawer">
+      <div class="admin-items" *ngIf="role == 'admin'">
         <div class="menu_buttons">
-            <button mat-raised-button color="primary" class="global_button" routerLink="dashpord">
+            <a mat-raised-button color="primary" class="global_button" routerLink="dashpord"  [routerLinkActiveOptions]="{exact:true}"  routerLinkActive="admin_active">
                 <mat-icon class="button_icon material-symbols-outlined">view_comfy_alt</mat-icon>
                 Dashboard
-            </button>
+            </a>
         </div>
         <div class="menu_buttons">
-            <button mat-raised-button color="primary" class="global_button" routerLink="admin-usersinfo">
+            <a mat-raised-button color="primary" class="global_button" routerLink="admin-usersinfo"  [routerLinkActiveOptions]="{exact:true}"  routerLinkActive="admin_active">
                 <mat-icon class="material-symbols-outlined button_icon">group</mat-icon>
                 Users
-            </button>
+            </a>
         </div>  
         <div class="menu_buttons">
-            <button mat-raised-button color="primary" class="global_button" routerLink="admin-cotegory">
+            <a mat-raised-button color="primary" class="global_button" routerLink="admin-cotegory"  [routerLinkActiveOptions]="{exact:true}"  routerLinkActive="admin_active">
                 <mat-icon class="material-symbols-outlined button_icon">category</mat-icon>
                 Category
-            </button>
+            </a>
         </div>  
         <div class="menu_buttons">
-            <button mat-raised-button color="primary" class="global_button" routerLink="admin-post">
+            <a mat-raised-button color="primary" class="global_button" routerLink="admin-post"  [routerLinkActiveOptions]="{exact:true}"  routerLinkActive="admin_active">
                 <mat-icon class="material-symbols-outlined button_icon">share</mat-icon>
                 Posts
-            </button>
+            </a>
         </div> 
         <div class="menu_buttons">
-            <button mat-raised-button color="primary"
-                    class="global_button"
-                    routerLink="admin-message"
-                    matBadge={{messageCount}}
-                    matBadgePosition="before"
-                    matBadgeColor="accent">
+            <a mat-raised-button color="primary" class="global_button" routerLink="admin-message" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="admin_active">
                 <mat-icon class="material-symbols-outlined button_icon">messages</mat-icon>
                 Messages
-            </button>
+            </a>
+        </div>
+      </div>
+       <div class="author-items" *ngIf="role == 'author'">
+        <div class="menu_buttons">
+            <a mat-raised-button color="primary" class="global_button" routerLink="author-posts" [routerLinkActiveOptions]="{exact:true}"  routerLinkActive="admin_active">
+                My Posts
+            </a>
         </div>
         <div class="menu_buttons">
-            <button mat-raised-button color="primary" class="global_button" routerLink="admin-register">
-                <mat-icon class="material-symbols-outlined button_icon">how_to_reg</mat-icon>
-                Reg New User
-            </button>
-        </div> 
+            <a mat-raised-button color="primary" class="global_button" routerLink="author-new-post" [routerLinkActiveOptions]="{exact:true}"  routerLinkActive="admin_active">
+                Add New Posts  
+            </a>
+        </div>
+       </div>
     </mat-drawer>
     <mat-drawer-content>
         <router-outlet> </router-outlet>

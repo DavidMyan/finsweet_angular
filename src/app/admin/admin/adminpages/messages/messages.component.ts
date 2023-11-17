@@ -8,7 +8,11 @@ import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   standalone:true,
-  imports: [MatExpansionModule,NgForOf,MatIconModule],
+  imports: [
+    MatExpansionModule,
+    NgForOf,
+    MatIconModule
+  ],
   selector: 'app-messages',
   templateUrl: './messages.component.html',
   styleUrls: ['./messages.component.css']
@@ -17,12 +21,16 @@ export class MessagesComponent implements OnInit{
   messages: Message[] = [];
   regMessages: any[] = [];
   panelOpenState = false;
+  answer: boolean | null = null;
 
   constructor(private http: HttpService) {}
+
+
 
   ngOnInit(): void {
     this.getMessage();
     this.getRaegMessages()
+
   }
 
   getMessage() {
@@ -44,7 +52,16 @@ export class MessagesComponent implements OnInit{
       this.http.deletItem(`${environment.regRequest.get}/${id}`).subscribe(() =>{
         this.getMessage()
         this.getRaegMessages()
-
     })
+  }
+  setAnswer(answer: boolean) {
+    this.answer = answer;
+    console.log(this.answer);
+    if (this.answer) {
+      const newUser = this.regMessages[0]
+      console.log(newUser);
+        this.http.addItem<any>(environment.usersInfo.get,newUser).subscribe(()=>{
+      })
+    } 
   }
 }

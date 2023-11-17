@@ -6,10 +6,10 @@ import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/materia
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AllPosts, CategoryCard, UsersCard } from 'src/app/modues/glob_muduls';
-
 import { HttpService } from 'src/app/service/http.service';
 import { environment } from 'src/environment/environment';
 import { MatSelectModule } from '@angular/material/select';
+
 @Component({
   standalone:true,
   imports: [
@@ -27,6 +27,7 @@ import { MatSelectModule } from '@angular/material/select';
   templateUrl: './dialog-for-posts.component.html',
   styleUrls: ['./dialog-for-posts.component.css']
 })
+
 export class DialogForPostsComponent implements OnInit {
   imageValue!: string;
   titleValue!: string;
@@ -37,22 +38,21 @@ export class DialogForPostsComponent implements OnInit {
 
   category: CategoryCard[] = [];
   authors: UsersCard[] = [];
-  isDelete: boolean;
   action!: string;
-  forum!: FormGroup;
+  form!: FormGroup;
 
   constructor(
     private http: HttpService,
     public dialogRef: MatDialogRef<DialogForPostsComponent>,
     @Inject(MAT_DIALOG_DATA) public data: {
-      isDelete: boolean,
+
       isAdd: boolean,
       action: string,
       postId?: number,
       postData: AllPosts
+
     }) {
 
-    this.isDelete = data.isDelete;
     this.action = data.action;
 
     this.imageValue = data.postData?.image || '';
@@ -62,7 +62,7 @@ export class DialogForPostsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.forum = new FormGroup({
+    this.form = new FormGroup({
       image: new FormControl(this.imageValue, [Validators.required]),
       postUser: new FormControl(this.selectedValue, [Validators.required]),
       category: new FormControl(this.categoryValue, [Validators.required]),
@@ -72,19 +72,11 @@ export class DialogForPostsComponent implements OnInit {
 
     this.getCategory();
     this.getAuthor();
-    
-  }
-  onNoClick(): void {
-    this.dialogRef.close(false);
-  }
-
-  onYesClick(): void {
-    this.dialogRef.close(true);
   }
 
   send() {
-    const selectedUser: UsersCard = this.forum.get('postUser')?.value;
-    const selectedCategoryr: CategoryCard = this.forum.get('category')?.value;
+    const selectedUser: UsersCard = this.form.get('postUser')?.value;
+    const selectedCategoryr: CategoryCard = this.form.get('category')?.value;
     
     const months = [
       'January', 'February', 'March', 'April', 'May', 'June',
@@ -95,17 +87,17 @@ export class DialogForPostsComponent implements OnInit {
     const formattedDate = `${months[postDate.getMonth()]} ${postDate.getDate()}, ${postDate.getFullYear()}`;
     
     const postData = {
-      image: this.forum.get('image')?.value,
+      image: this.form.get('image')?.value,
       postUser: selectedUser.name,
       postUserImg: selectedUser.image,
       category: selectedCategoryr.title,
       categoryImg: selectedCategoryr.image,
-      title: this.forum.get('title')?.value,
-      short_description: this.forum.get('short_description')?.value,
+      title: this.form.get('title')?.value,
+      short_description: this.form.get('short_description')?.value,
+      noFoto: "assets/img/post_imgs/defolt_foto.png",
       postData: formattedDate
     };
-    console.log(postDate);
-    
+
     this.dialogRef.close({
       data: postData,
       action: this.action
@@ -123,8 +115,9 @@ export class DialogForPostsComponent implements OnInit {
       this.authors = data;
     });
   }
+
   getErrorMessage(controlName: string): string {
-    const control = this.forum.get(controlName);
+    const control = this.form.get(controlName);
     if (control?.hasError('required')) {
       return 'This field is required';
     }

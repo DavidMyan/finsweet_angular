@@ -1,5 +1,6 @@
 .mat_drawer{
     width: 20%;
+    height: 100vh;
 }
 .global_button{
     width: 100%;
@@ -7,6 +8,7 @@
     display: flex;
     font-size: 25px;
     justify-content: flex-start;
+    transition: 0.4s;
 }
 .button_icon{
     font-size: 40px;
@@ -23,3 +25,18 @@ mat-toolbar{
     display: flex;
     justify-content: space-between;
 }
+mat-drawer-container{
+    height: 100vh;
+}
+.author-image{
+    width: 45px;
+    height: 45px;
+  }
+  .info-box{
+    display: flex;
+    align-items: center;
+  }
+  .admin_active{
+    background-color: gray;
+    scale: 1.1;
+  }

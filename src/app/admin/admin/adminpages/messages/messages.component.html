@@ -27,7 +27,7 @@
                        (closed)="panelOpenState = false">
     <mat-expansion-panel-header>
       <mat-panel-title>
-         <div> User Name: {{data.fullname}}</div>
+         <div> User Name: {{data.name}}</div>
       </mat-panel-title>
       <mat-panel-description>
         <h3>Registration Request</h3>
@@ -37,11 +37,17 @@
     <ul class="reg_message-box">
       <li>Email:{{data.email}}</li>
       <li>Image:{{data.image}}</li>
-      <li>Name:{{data.f_name}}</li>
-      <li>Last Name:{{data.l_name}}</li>
+      <li>Name:{{data.name}}</li>
       <li>Speciality:{{data.short_description}}</li>
       <li>Message:{{data.description}}</li>
+      <li>Message:{{data.password}}</li>
     </ul>
+    <div>
+      <button mat-button (click)="setAnswer(true)">Yes</button>
+    </div>
+    <div>
+        <button mat-button (click)="setAnswer(false)">No</button>
+    </div>
     <div class="icon-box">
       <mat-icon class="mat-18" (click)="deleteRegMessages(data.id)">delete_forever</mat-icon>
       <a href ="mailto:{{data.email}}">

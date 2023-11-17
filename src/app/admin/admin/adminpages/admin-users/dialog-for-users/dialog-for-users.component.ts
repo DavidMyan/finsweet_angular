@@ -6,7 +6,6 @@ import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/materia
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { UsersCard } from 'src/app/modues/glob_muduls';
-
 @Component({
   standalone:true,
   imports: [
@@ -24,30 +23,23 @@ import { UsersCard } from 'src/app/modues/glob_muduls';
 })
 
 export class DialogForUsersComponent {
-  isDelete: boolean;
-  isAdd: boolean;
   action!: string;
   form!: FormGroup;
-
   nameValue!:string
   imageValue!:string
-  shortDescriptionValue!:string
-
+  shortDescriptionValue!:string;
+  
   constructor(
-    public dialogRef: MatDialogRef<DialogForUsersComponent>, 
+    public dialogRef: MatDialogRef<DialogForUsersComponent>,
     @Inject(MAT_DIALOG_DATA) public data: {
 
-      isDelete: boolean,
-      isAdd: boolean,
       action: string,
       userData: UsersCard,
       
     }){
     
-    this.isDelete = data.isDelete;
-    this.isAdd = data.isAdd;
     this.action = data.action;
-    
+
     this.nameValue = data.userData?.name;
     this.imageValue = data.userData?.image;
     this.shortDescriptionValue = data.userData?.short_description;
@@ -58,21 +50,25 @@ export class DialogForUsersComponent {
       short_description: new FormControl(this.shortDescriptionValue),
 
     });
-    
+
     this.form.get('name')?.setValidators([Validators.required]);
     this.form.get('image')?.setValidators([Validators.required]);
     this.form.get('short_description')?.setValidators([Validators.required]);
+  }
+
+  send() {
+    const formData = this.form.value;
+    formData.noFoto = "assets/img/authors_imgs/defolt_avatar.png";
+    formData.facebook = "assets/img/footer/facebook.png",
+    formData.twiter = "assets/img/footer/twiter.png",
+    formData.instagram = "assets/img/footer/instagram.png",
+    formData.in = "assets/img/footer/in.png"
+    this.dialogRef.close({
+      data: formData,
+      action: this.action 
+    });
     
   }
-
-  onNoClick(): void {
-    this.dialogRef.close(false);
-  }
-
-  onYesClick(): void {
-    this.dialogRef.close(true);
-  }
-
   getErrorMessage(controlName: string): string {
     const control = this.form.get(controlName);
     if (control?.hasError('required')) {
@@ -81,11 +77,5 @@ export class DialogForUsersComponent {
     return '';
   }
 
-  send() {
-    this.dialogRef.close({ 
-      data: this.form.value,
-      action: this.action 
-    });
-    
-  }
+
 }

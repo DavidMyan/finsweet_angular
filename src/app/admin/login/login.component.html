@@ -3,18 +3,21 @@
     <form class="example-form" (ngSubmit)="save()">
       <mat-form-field class="example-full-width">
         <mat-label>Email</mat-label>
-        <input type="email" matInput [formControl]="emailFormControl" placeholder="Enter Your Email" (input)="onEmailInput()">
+          <input type="email"  matInput [formControl]="emailFormControl" placeholder="Enter Your Email" (input)="onEmailInput()">
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>Password</mat-label>
           <input type="password" matInput [formControl]="password"  placeholder="Enter Your Password">
         </mat-form-field>
+        <div *ngIf="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </div>
         <section class="button-box">
-          <button type="submit" mat-raised-button color="primary">Login <mat-icon class="mat-18">login</mat-icon></button>
+          <button type="submit"  mat-raised-button color="warn">Login <mat-icon class="mat-18">login</mat-icon></button>
            <p class="button-text">
             OR
           </p>
-          <a class="reg_link" routerLink ="/admin/registration">You Can Registration</a>
+          <a class="reg_link" mat-raised-button color="warn" routerLink ="/admin/registration">You Can Registration</a>
       </section>
     </form>
   </div>

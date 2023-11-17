@@ -7,6 +7,7 @@ import { HttpService } from 'src/app/service/http.service';
 import { environment } from 'src/environment/environment';
 import { ActivatedRoute } from '@angular/router'; 
 
+
 @Component({
   standalone:true,
   imports:[
@@ -23,7 +24,10 @@ export class AuthorComponent implements OnInit {
   user!: UsersCard[];
   authorName!: string;
   posts:AllPosts[]=[]
-  constructor(private route: ActivatedRoute, private http: HttpService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private http: HttpService,
+    ) {}
 
   ngOnInit(): void {
     this.getSingleUser();
@@ -43,4 +47,5 @@ export class AuthorComponent implements OnInit {
         console.log(`${environment.posts.get}?postUser=${this.authorName}`);
     });
   }
+  
 }

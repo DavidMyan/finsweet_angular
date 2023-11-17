@@ -1,56 +1,57 @@
 <div class="forum_bg">
-    <div class="form_box">
-        <form [formGroup]="firstFormGroup" (ngSubmit)="openDialog()">
-            <div>
-              <mat-form-field class="example-full-width">
-                <mat-label>Enter your email</mat-label>
-                <input matInput placeholder="pat@example.com" formControlName="email" required>
-                <mat-error *ngIf="firstFormGroup.get('email')?.invalid">{{ getErrorMessage(firstFormGroup.get('email')!) }}</mat-error>
-              </mat-form-field>
-            </div>
-            <div>
-              <mat-form-field class="example-full-width">
-                <mat-label>Enter Your Password</mat-label>
-                <input type="password" matInput formControlName="password"  placeholder="Password" required>
-                <mat-error *ngIf="firstFormGroup.get('password')?.invalid">{{ getErrorMessage(firstFormGroup.get('password')!) }}</mat-error>
-              </mat-form-field>
-            </div>
-            <div>
-                <mat-form-field class="example-full-width">
-                  <mat-label>Enter Your Name</mat-label>
-                  <input type="text" matInput formControlName="f_name"  placeholder="Name" required>
-                  <mat-error *ngIf="firstFormGroup.get('f_name')?.invalid">{{ getErrorMessage(firstFormGroup.get('f_name')!) }}</mat-error>
-                </mat-form-field>
-              </div>
-              <div>
-                <mat-form-field class="example-full-width">
-                  <mat-label>Enter Your First Name</mat-label>
-                  <input type="text" matInput formControlName="l_name"  placeholder="First Name" required>
-                  <mat-error *ngIf="firstFormGroup.get('l_name')?.invalid">{{ getErrorMessage(firstFormGroup.get('l_name')!) }}</mat-error>
-                </mat-form-field>
-              </div>
-              <div>
-                <mat-form-field class="example-full-width">
-                  <mat-label>Enter Your Image</mat-label>
-                  <input type="text" matInput formControlName="image"  placeholder="Image" required>
-                  <mat-error *ngIf="firstFormGroup.get('image')?.invalid">{{ getErrorMessage(firstFormGroup.get('image')!) }}</mat-error>
-                </mat-form-field>
-              </div>
-              <div>
-                <mat-form-field class="example-full-width">
-                  <mat-label>Enter Your Specefication</mat-label>
-                  <input type="text" matInput formControlName="short_description"  placeholder="Specefication" required>
-                  <mat-error *ngIf="firstFormGroup.get('short_description')?.invalid">{{ getErrorMessage(firstFormGroup.get('short_description')!) }}</mat-error>
-                </mat-form-field>
-              </div>
-              <mat-form-field class="example-full-width">
-                <mat-label>Textarea</mat-label>
-                <textarea matInput formControlName="description" placeholder="Write about yourself"></textarea>
-                <mat-error *ngIf="firstFormGroup.get('description')?.invalid">{{ getErrorMessage(firstFormGroup.get('description')!) }}</mat-error>
-              </mat-form-field>
-            <div>
-              <button class="reg-button" [disabled]="firstFormGroup.invalid" type="submit" mat-raised-button >Send Reg Message </button>
-            </div>
-        </form>
-    </div>
+  
+  <div class="form-flex">
+    <a routerLink ="/admin/login" mat-raised-button color="warn" class="form_back-button">
+      <mat-icon class="mat-18">arrow_back</mat-icon>
+    </a>
+    <form [formGroup]="firstFormGroup" >
+        <mat-form-field>
+          <mat-label>Enter your email</mat-label>
+          <input matInput placeholder="pat@example.com" formControlName="email" required>
+          <mat-error *ngIf="firstFormGroup.get('email')?.invalid">{{ getErrorMessage(firstFormGroup.get('email')!) }}</mat-error>
+        </mat-form-field>
+      <div>
+        <mat-form-field class="example-full-width">
+          <mat-label>Enter Your Password</mat-label>
+          <input type="password" matInput formControlName="password"  placeholder="Password" required>
+          <mat-error *ngIf="firstFormGroup.get('password')?.invalid">{{ getPasswordErrorMessage(firstFormGroup.get('password')!) }}</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="example-full-width">
+          <mat-label>Enter Your First Name</mat-label>
+          <input matInput placeholder="First Name" type="text" formControlName="f_name">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="example-full-width">
+          <mat-label>Enter Your Last Name</mat-label>
+          <input matInput placeholder="Last Name" type="text" formControlName="l_name">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="example-full-width">
+          <mat-label>Enter Your Image</mat-label>
+          <input matInput placeholder="Image" type="text" formControlName="image">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="example-full-width">
+          <mat-label>Enter Your Speciality</mat-label>
+          <input matInput placeholder="Speciality" type="text" formControlName="short_description">
+        </mat-form-field>
+      </div>
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+      <div class="button-box">
+        <a class="button-item"  mat-raised-button color="warn" (click)="firstFormGroup.reset()">
+          <mat-icon class="mat-18">restart_alt</mat-icon> Reset
+        </a>
+        <a class="button-item"  mat-raised-button color="warn" [disabled]="!firstFormGroup.valid" (click)="newRegLog()">
+          <mat-icon class="mat-18">send</mat-icon>Send
+        </a>
+      </div>
+    </form>
+  </div>
 </div>

@@ -1,12 +1,9 @@
-import { AuthorPostsComponent } from './admin/author-page/author-posts/author-posts.component';
-import { AuthorPageComponent } from './admin/author-page/author-page.component';
-import { RegistrationComponent } from './admin/registration/registration.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { loginGuard } from './guards/login.guard';
 import { adminGuard } from './guards/admin.guard';
-import { authorGuard } from './guards/author.guard';
+import { limitGuard } from './guards/limit.guard';
 
 const routes: Routes = [
   {
@@ -69,29 +66,6 @@ const routes: Routes = [
    
     },
     {
-      path:'author-page',
-      loadComponent: () => import  ('./admin/author-page/author-page.component').then(m => m.AuthorPageComponent),
-      title: 'Author Page',
-      canActivateChild:[authorGuard],
-      children:[
-        {
-          path:'',
-          redirectTo: 'author-posts',
-          pathMatch: 'full'
-        },
-        {
-         path:'author-posts',
-         loadComponent: () => import  ('./admin/author-page/author-posts/author-posts.component').then(m => m.AuthorPostsComponent),
-         title: 'Author Posts'
-        },
-        {
-          path:'author-new-post',
-          loadComponent: () => import  ('./admin/author-page/author-add-new-posts/author-add-new-posts.component').then(m => m.AuthorAddNewPostsComponent),
-          title: 'Author New Post'
-         },
-      ]
-    },
-    {
       path:'admin/registration',
       loadComponent: () => import  ('./admin/registration/registration.component').then(m => m.RegistrationComponent),
       title: 'Registration',
@@ -102,41 +76,46 @@ const routes: Routes = [
       title: 'Admin',
       canActivateChild:[adminGuard],
       children:[
-          {
-            path:'',
-            redirectTo: 'dashpord',
-            pathMatch: 'full'
-          },
          {
           path:'dashpord',
           loadComponent: () => import  ('./admin/admin/adminpages/dashboardadmin/dashboardadmin.component').then(m => m.DashboardadminComponent),
-          title: 'Dashpord'
+          title: 'Dashpord',
+          canActivate:[limitGuard]
          },
          {
           path:'admin-usersinfo',
           loadComponent: () => import  ('./admin/admin/adminpages/admin-users/admin-users.component').then(m => m.AdminUsersComponent),
-          title: 'Users Info'
+          title: 'Users Info',
+          canActivate:[limitGuard]
          },
          {
           path:'admin-cotegory',
           loadComponent: () => import  ('./admin/admin/adminpages/admin-category/admin-category.component').then(m => m.AdminCategoryComponent),
-          title: 'Admin Cotegory'
+          title: 'Admin Cotegory',
+          canActivate:[limitGuard]
          },
          {
           path:'admin-post',
           loadComponent: () => import  ('./admin/admin/adminpages/admin-posts/admin-posts.component').then(m => m.AdminPostsComponent),
-          title: 'Admin Posts'
+          title: 'Admin Posts',
+          canActivate:[limitGuard]
          },
          {
           path:'admin-message',
           loadComponent: () => import  ('./admin/admin/adminpages/messages/messages.component').then(m => m.MessagesComponent),
-          title: 'Admin Message'
+          title: 'Admin Message',
+          canActivate:[limitGuard]
          },
          {
-          path:'admin-register',
-          loadComponent: () => import  ('./admin/admin/adminpages/admin-register/admin-register.component').then(m => m.AdminRegisterComponent),
-          title: 'Admin Register'
-         }
+          path:'author-posts',
+          loadComponent: () => import  ('./admin/admin/adminpages/author-posts/author-posts.component').then(m => m.AuthorPostsComponent),
+          title: 'Author Posts',
+         },
+         {
+           path:'author-new-post',
+           loadComponent: () => import  ('./admin/admin/adminpages/author-add-new-posts/author-add-new-posts.component').then(m => m.AuthorAddNewPostsComponent),
+           title: 'Author New Post',
+         },
       ]
     },                                    
     {
